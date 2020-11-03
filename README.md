@@ -1,4 +1,4 @@
-# NAME TBD
+# Gift Fairy
 
 ## Features
 * Christmas gift registry page.
