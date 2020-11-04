@@ -1,7 +1,7 @@
 # Gift Fairy
 
 ## Features
-* Christmas gift registry page.
+* Gift registry page.
 * Give clothing and shoe sizes for yourself and gift preferences.
 * Allow members to make comments and suggestions on wish lists that cannot be viewed by owner.
 * Databases for wishlist, users, wishlist comments, wishlist items...
