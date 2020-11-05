@@ -1,0 +1,56 @@
+body {
+    background-color:rgba(104,176,172, 30%);
+}
+
+.navbar {
+   /* background-color:rgba(235,244,243, 90%); */
+   padding: .3em;
+}
+
+/* create profile button */
+#profile {
+    background-color:rgba(255,126,103, 90%);
+}
+
+/* login button */
+#login {
+    color: #68b0ac;
+}
+
+.hero {
+   color: #ffffff;
+   font-family: sans-serif;
+   vertical-align: middle;
+   /* background-color:rgba(255,255,255, 50%); */
+}
+
+#process-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-color: black;
+}
+
+#profile-container {
+    color: #ffffff;
+}
+
+/* Parallax test but removed the html already, I left it in case it's an option for the profile section on homepage */
+.parallax {
+    /* The image used */
+    background-image: url("/assets/img/logo-gf.png");
+  
+    min-height: 100%; 
+  
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+  }
