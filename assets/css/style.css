@@ -41,7 +41,9 @@ body {
 }
 
 #profile-container {
-    color: #ffffff;
+    color: white;
+    /* background-color: white; */
+    /* padding-bottom: 20px; */
 }
 
 .notification {
@@ -57,8 +59,12 @@ body {
     background: #fff center center no-repeat;
     background-size: 20px 20px;
 }
-
-
+.footer {
+    padding:2rem 1.5rem 2rem;
+    background-color: transparent;
+    /* border-top: 1px solid #006a71; */
+}
+	
 
 /* Parallax test but removed the html already, I left it in case it's an option for the profile section on homepage */
 .parallax {
