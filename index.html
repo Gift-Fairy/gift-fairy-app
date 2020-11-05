@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-
     <!-- scripts -->
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -55,10 +54,10 @@
 
         <!-- hero section image, video or gif -->
         <div class="hero-body">
-            <div class="container has-text-centered">
+            <div class="container is-fullhd">
                 <!-- "is-16by9" for mobile friendly dimensions -->
-                <figure class="image is-16by9">
-                    <img class="has-ratio" src="./assets/img/560x420 gifts.jpg">
+                <figure class="image is-3by1">
+                    <img class="has-ratio" src="./assets/img/hero-image-gift-computer.png">
                 </figure>
             </div>
         </div>
@@ -72,16 +71,16 @@
             <div class="tile is-12 py-5 px-5 mg-medium">
                 <div class="tile is-parent is-4">
                     <div class="container">
-                        <article class="tile is-child notification has-text-centered">
+                        <article class="tile is-child notification has-text-centered tile-shadow">
                             <p class="title">Create a Profile</p>
                             <figure class="image is-4by3 is-centered">
-                                <img src="./assets/img/buy-shopping-cart-keyboard-online.jpg">
+                                <img src="./assets/img/tile-image-create-a-profile.png">
                             </figure>
                         </article>
                     </div>
                 </div>
                 <div class="tile is-parent is-4">
-                    <article class="tile is-child notification has-text-centered">
+                    <article class="tile is-child notification has-text-centered tile-shadow ">
                         <p class="title">Make a List</p>
                         <figure class="image is-4by3 is-centered">
                             <img src="./assets/img/checklist_woman.jpg">
@@ -89,10 +88,10 @@
                     </article>
                 </div>
                 <div class="tile is-parent is-4">
-                    <article class="tile is-child notification has-text-centered">
+                    <article class="tile is-child notification has-text-centered tile-shadow">
                         <p class="title">Buy a Gift</p>
                         <figure class="image is-4by3 is-centered">
-                            <img src="./assets/img/buy-shopping-cart-keyboard-online.jpg">
+                            <img src="./assets/img/tile-image-buy-a-gift.png">
                         </figure>
                     </article>
                 </div>
@@ -116,55 +115,58 @@
         </div>
 
         <!-- carousel begins -->
-        <div class="container is-clipped">
-            <div id="slider">
+        <div id="carousel-slider" class="carousel">
+            <div class="card-image">
+                    <figure class="image is-128x128 is-covered">
+                            <img src="./assets/img/hipster.jpg" alt="" />
+                        </figure>
+                        Are you a hipster Santa?
 
-                <!-- profile 1 -->
-                <div class="card">
+                    </div>
+
                     <div class="card-image">
                         <figure class="image is-128x128 is-covered">
                             <img src="./assets/img/hipster.jpg" alt="" />
                         </figure>
-                    </div>
-                    <div class="card-content">
-                        <div class="profile-name">
-                            Master Coder
-                        </div>
-                        <div class="profile-desc">
-                            Are you a coder?
-                        </div>
-                    </div>
-                </div>
+                        Are you a hipster Santa?
 
-                <!-- profile 2 -->
-                <div class="card">
+                    </div>
+
                     <div class="card-image">
                         <figure class="image is-128x128 is-covered">
-                            <img src="./assets/img/hipster.jpg">
+                            <img src="./assets/img/hipster.jpg" alt="" />
                         </figure>
-                    </div>
-                    <div class="card-content">
-                        <div class="profile-name">
-                            Hipster Santa
-                        </div>
-                        <div class="profile-desc">
-                            Are you a hipster santa?
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                        Are you a hipster Santa?
 
+                    </div>
+
+                    <div class="card-image">
+                        <figure class="image is-128x128 is-covered">
+                            <img src="./assets/img/hipster.jpg" alt="" />
+                        </figure>
+                        Are you a hipster Santa?
+
+                    </div>
+
+                    <div class="card-image">
+                        <figure class="image is-128x128 is-covered">
+                            <img src="./assets/img/hipster.jpg" alt="" />
+                        </figure>
+                        Are you a hipster Santa?
+
+                    </div></div>
+
+        
         <!-- profile slider -->
         <input class="slider is-fullwidth is-small is-circle" step="1" min="0" max="6" value="0" type="range">
 
     </section>
 
     <!-- bulma calendar ext in case we need it -> 'https://creativebulma.net/product/calendar/demo' -->
-    <script src="~bulma-calendar/dist/js/bulma-calendar.min.js"></script>
+    <!-- <script src="~bulma-calendar/dist/js/bulma-calendar.min.js"></script> -->
     <!-- carousel plugin for bulma -->
-    <script type="text/javascript"
-        src="/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.js"></script>
-
+    <script type="text/javascript"  src="/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script> 
+    <script src="./assets/js/scripts.js"></script>
 </body>
 </html>

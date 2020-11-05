@@ -31,8 +31,23 @@ body {
     border-color: black;
 }
 
+.tile-shadow {
+  transition: box-shadow .3s;
+}
+
+.tile-shadow:hover {
+  box-shadow: 0 0 10px rgba(33,33,33,.2); 
+}
+
 #profile-container {
     color: #ffffff;
+}
+
+.notification {
+    padding-top: 1.25rem;
+    padding-right: 2rem;
+    padding-bottom: 1.25rem;
+    padding-left: 2rem;
 }
 
 /* Parallax test but removed the html already, I left it in case it's an option for the profile section on homepage */
