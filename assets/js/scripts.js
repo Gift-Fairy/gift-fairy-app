@@ -18,7 +18,7 @@ for(var i = 0; i < carousels.length; i++) {
 }
 
 // Access to bulmaCarousel instance of an element
-var element = document.querySelector('.card-image');
+var element = document.querySelector('.card');
 if (element && element.bulmaCarousel) {
 	// bulmaCarousel instance is available as element.bulmaCarousel
 	element.bulmaCarousel.on('before-show', function(state) {

@@ -7,6 +7,11 @@ body {
    padding: .3em;
 }
 
+.navbar-menu {
+    background-color: transparent;
+    box-shadow: none;
+}
+
 /* create profile button */
 #profile {
     background-color:rgba(255,126,103, 90%);
@@ -59,12 +64,20 @@ body {
     background: #fff center center no-repeat;
     background-size: 20px 20px;
 }
+
+
+
+.card {
+    background-color: transparent;
+    box-shadow: none;
+    text-align: center;
+
+}
 .footer {
     padding:2rem 1.5rem 2rem;
     background-color: transparent;
     /* border-top: 1px solid #006a71; */
 }
-	
 
 /* Parallax test but removed the html already, I left it in case it's an option for the profile section on homepage */
 .parallax {
