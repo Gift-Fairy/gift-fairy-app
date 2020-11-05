@@ -1,21 +1,19 @@
 body {
-    background-color:rgba(104,176,172, 30%);
+  background-color:rgba(104,176,172, 30%);
 }
 
 .navbar {
    /* background-color:rgba(235,244,243, 90%); */
    padding: .3em;
 }
-
 .navbar-menu {
-    background-color: transparent;
-    box-shadow: none;
+  background-color: transparent;
+  box-shadow: none;
 }
 
 /* create profile button */
 #profile {
-    background-color:rgba(255,126,103, 90%);
-}
+  background-color:rgba(255,126,103, 90%);}
 
 /* login button */
 #login {
@@ -46,7 +44,7 @@ body {
 }
 
 #profile-container {
-    color: white;
+    color: #ff7e67;
     /* background-color: white; */
     /* padding-bottom: 20px; */
 }
@@ -64,13 +62,10 @@ body {
     background: #fff center center no-repeat;
     background-size: 20px 20px;
 }
-
-
-
 .card {
-    background-color: transparent;
-    box-shadow: none;
-    text-align: center;
+  background-color: transparent;
+  box-shadow: none;
+  text-align: center;
 
 }
 .footer {
@@ -83,9 +78,7 @@ body {
 .parallax {
     /* The image used */
     background-image: url("/assets/img/logo-gf.png");
-  
-    min-height: 100%; 
-  
+    min-height: 100%;   
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
