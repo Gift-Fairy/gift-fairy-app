@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- scripts -->
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script> -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
     <script defer src="./assets/js/scripts.js"></script>
 
 </head>
@@ -29,7 +29,7 @@
                     <!-- app logo -->
                     <div class="navbar-brand">
                         <figure class="image is-128x128">
-                            <img class="navbar-item" src="./assets/img/logo-gf.png">
+                            <img class="navbar-item" src="./assets/img/gift-logo.png">
                         </figure>
                     </div>
                 </div>
@@ -120,15 +120,14 @@
         </div>
 
         <!-- carousel begins -->
-        <div id="carousel-slider" class="carousel">
+        <div class="container is-clipped">
+        <div id="carousel-slider" class="carousel  is-primary">
             <div class="card-image">
                     <figure class="image is-128x128 is-covered">
-                            <img src="./assets/img/hipster.jpg" alt="" />
+                            <img class="is-rounded" src="./assets/img/hipster.jpg" alt="" />
                         </figure>
                         Are you a hipster Santa?
-
-                    </div>
-
+                </div>
                     <div class="card-image">
                         <figure class="image is-128x128 is-covered">
                             <img src="./assets/img/hipster.jpg" alt="" />
@@ -160,21 +159,22 @@
                         Are you a hipster Santa?
 
                     </div></div>
-
+                    </div>
         
-        <!-- profile slider -->
+        <!-- profile slider 
         <input class="slider is-fullwidth is-small is-circle" step="1" min="0" max="6" value="0" type="range">
-
+-->
     </section>
 
      <!-- bulma calendar ext in case we need it -> 'https://creativebulma.net/product/calendar/demo' -->
      <script src="~bulma-calendar/dist/js/bulma-calendar.min.js"></script>
      <!-- carousel plugin for bulma -->
-     <script type="text/javascript"
-         src="/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.js"></script>
+     <script type="text/javascript" src="/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.js"></script>
+         <script src="./assets/js/scripts.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+
      <!-- AOS -->
      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
- 
      <script>
          AOS.init();
      </script>
