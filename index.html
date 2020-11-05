@@ -7,12 +7,14 @@
     <title>Gift Fairy</title>
     <!-- css stylesheets -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" /> -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- scripts -->
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+    <!-- <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script> -->
     <script defer src="./assets/js/scripts.js"></script>
 
 </head>
@@ -38,10 +40,12 @@
                         <div class="navbar-item is-active">
                             <div class="field is-grouped">
                                 <div class="buttons">
-                                    <a class="button is-primary" id="profile">
+                                    <a class="button is-primary" data-aos="flip-left" data-aos-duration="1500"
+                                        id="profile">
                                         <strong>Create a profile</strong>
                                     </a>
-                                    <a class="button is-primary is-inverted" id="login">
+                                    <a class="button is-primary is-inverted" data-aos="flip-left"
+                                        data-aos-duration="1500" id="login">
                                         <strong>Login</strong>
                                     </a>
                                 </div>
@@ -82,6 +86,7 @@
                 <div class="tile is-parent is-4">
                     <article class="tile is-child notification has-text-centered tile-shadow ">
                         <p class="title">Make a List</p>
+                        <!-- <i class="fas fa-list-ol fa-5x"></i> -->
                         <figure class="image is-4by3 is-centered">
                             <img src="./assets/img/checklist_woman.jpg">
                         </figure>
@@ -101,15 +106,15 @@
 
     <!-- showing profiles carousel or slider -->
     <section id="profile-container">
-        <div class="columns is-centered">
-            <div class="column is-8 pt-6">
+        <div class="columns is-centered" data-aos="fade-left" data-aos-delay="500" data-aos-duration="2500">
+            <div class="column is-10 pt-6">
                 <article class="message">
                     <!-- <div class="message-header"></div> -->
-                        <div class="message-body">
-                            <p>"We have 6 popular individuals and the gifts that they would love to get.
+                    <div class="message-body">
+                        <p>"We have 6 popular individuals and the gifts that they would love to get.
                             If you think you're similar to one of these people, then select profile to jump-start
                             your profile setup"</p>
-                        </div>
+                    </div>
                 </article>
             </div>
         </div>
@@ -162,11 +167,16 @@
 
     </section>
 
-    <!-- bulma calendar ext in case we need it -> 'https://creativebulma.net/product/calendar/demo' -->
-    <!-- <script src="~bulma-calendar/dist/js/bulma-calendar.min.js"></script> -->
-    <!-- carousel plugin for bulma -->
-    <script type="text/javascript"  src="/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script> 
-    <script src="./assets/js/scripts.js"></script>
-</body>
+     <!-- bulma calendar ext in case we need it -> 'https://creativebulma.net/product/calendar/demo' -->
+     <script src="~bulma-calendar/dist/js/bulma-calendar.min.js"></script>
+     <!-- carousel plugin for bulma -->
+     <script type="text/javascript"
+         src="/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.js"></script>
+     <!-- AOS -->
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ 
+     <script>
+         AOS.init();
+     </script>
+
 </html>
