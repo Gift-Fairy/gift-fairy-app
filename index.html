@@ -7,13 +7,15 @@
     <title>Gift Fairy</title>
     <!-- css stylesheets -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" /> -->
     <link rel="stylesheet" href="./assets/css/style.css" />
 
     <!-- scripts -->
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+    <!-- <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script> -->
     <script defer src="./assets/js/scripts.js"></script>
 
 </head>
@@ -39,10 +41,12 @@
                         <div class="navbar-item is-active">
                             <div class="field is-grouped">
                                 <div class="buttons">
-                                    <a class="button is-primary" id="profile">
+                                    <a class="button is-primary" data-aos="flip-left" data-aos-duration="1500"
+                                        id="profile">
                                         <strong>Create a profile</strong>
                                     </a>
-                                    <a class="button is-primary is-inverted" id="login">
+                                    <a class="button is-primary is-inverted" data-aos="flip-left"
+                                        data-aos-duration="1500" id="login">
                                         <strong>Login</strong>
                                     </a>
                                 </div>
@@ -57,7 +61,7 @@
         <div class="hero-body">
             <div class="container has-text-centered">
                 <!-- "is-16by9" for mobile friendly dimensions -->
-                <figure class="image is-16by9">
+                <figure class="image is-16by9" data-aos="fade-down" data-aos-duration="1500">
                     <img class="has-ratio" src="./assets/img/560x420 gifts.jpg">
                 </figure>
             </div>
@@ -70,30 +74,36 @@
     <section id="process-container">
         <div class="tile is-ancestor">
             <div class="tile is-12 py-5 px-5 mg-medium">
-                <div class="tile is-parent is-4">
+                <div class="tile is-parent is-4" data-aos="fade-up" data-aos-duration="1500"
+                    data-aos-anchor-placement="top-center">
                     <div class="container">
                         <article class="tile is-child notification has-text-centered">
                             <p class="title">Create a Profile</p>
-                            <figure class="image is-4by3 is-centered">
+                            <i class="far fa-id-card fa-5x"></i>
+                            <!-- <figure class="image is-4by3 is-centered">
                                 <img src="./assets/img/buy-shopping-cart-keyboard-online.jpg">
-                            </figure>
+                            </figure> -->
                         </article>
                     </div>
                 </div>
-                <div class="tile is-parent is-4">
+                <div class="tile is-parent is-4" data-aos="fade-down" data-aos-duration="1500"
+                    data-aos-anchor-placement="top-center">
                     <article class="tile is-child notification has-text-centered">
                         <p class="title">Make a List</p>
-                        <figure class="image is-4by3 is-centered">
+                        <i class="fas fa-list-ol fa-5x"></i>
+                        <!-- <figure class="image is-4by3 is-centered">
                             <img src="./assets/img/checklist_woman.jpg">
-                        </figure>
+                        </figure> -->
                     </article>
                 </div>
-                <div class="tile is-parent is-4">
+                <div class="tile is-parent is-4" s data-aos="fade-up" data-aos-duration="1500"
+                    data-aos-anchor-placement="top-center">
                     <article class="tile is-child notification has-text-centered">
                         <p class="title">Buy a Gift</p>
-                        <figure class="image is-4by3 is-centered">
+                        <i class="fas fa-gift fa-5x"></i>
+                        <!-- <figure class="image is-4by3 is-centered">
                             <img src="./assets/img/buy-shopping-cart-keyboard-online.jpg">
-                        </figure>
+                        </figure> -->
                     </article>
                 </div>
             </div>
@@ -102,53 +112,76 @@
 
     <!-- showing profiles carousel or slider -->
     <section id="profile-container">
-        <div class="columns is-centered">
-            <div class="column is-8 pt-6">
+        <div class="columns is-centered" data-aos="fade-left" data-aos-delay="500" data-aos-duration="2500">
+            <div class="column is-10 pt-6">
                 <article class="message">
                     <!-- <div class="message-header"></div> -->
-                        <div class="message-body">
-                            <p>"We have 6 popular individuals and the gifts that they would love to get.
+                    <div class="message-body">
+                        <p>"We have 6 popular individuals and the gifts that they would love to get.
                             If you think you're similar to one of these people, then select profile to jump-start
                             your profile setup"</p>
-                        </div>
+                    </div>
                 </article>
             </div>
         </div>
 
         <!-- carousel begins -->
         <div class="container is-clipped">
-            <div id="slider">
+            <div class="columns is-multiline pt-6">
+                <div class="column is-4" data-aos="fade-left" data-aos-delay="500" data-aos-duration="3000">
 
-                <!-- profile 1 -->
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-128x128 is-covered">
-                            <img src="./assets/img/hipster.jpg" alt="" />
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <div class="profile-name">
-                            Master Coder
+                    <!-- profile 1 -->
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-128x128 is-covered">
+                                <img src="./assets/img/hipster.jpg" alt="" />
+                            </figure>
                         </div>
-                        <div class="profile-desc">
-                            Are you a coder?
+                        <div class="card-content">
+                            <div class="profile-name">
+                                Master Coder
+                            </div>
+                            <div class="profile-desc">
+                                Are you a coder?
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- profile 2 -->
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-128x128 is-covered">
-                            <img src="./assets/img/hipster.jpg">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <div class="profile-name">
-                            Hipster Santa
+                <div class="column is-4" data-aos="fade-left" data-aos-delay="500" data-aos-duration="3000">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-128x128 is-covered">
+                                <img src="./assets/img/hipster.jpg">
+                            </figure>
                         </div>
-                        <div class="profile-desc">
-                            Are you a hipster santa?
+                        <div class="card-content">
+                            <div class="profile-name">
+                                Hipster Santa
+                            </div>
+                            <div class="profile-desc">
+                                Are you a hipster santa?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- profile 3 -->
+                <div class="column is-4" data-aos="fade-left" data-aos-delay="500" data-aos-duration="3000">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-128x128 is-covered">
+                                <img src="./assets/img/hipster.jpg">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="profile-name">
+                                Lazy Reindeer
+                            </div>
+                            <div class="profile-desc">
+                                Are you a lazy reindeer?
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -165,6 +198,12 @@
     <!-- carousel plugin for bulma -->
     <script type="text/javascript"
         src="/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>

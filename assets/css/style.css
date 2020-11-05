@@ -24,11 +24,12 @@ body {
    /* background-color:rgba(255,255,255, 50%); */
 }
 
-#process-container {
+#process-container, .p {
     display: flex;
     align-items: center;
     text-align: center;
     border-color: black;
+    color: #ff7e67;
 }
 
 #profile-container {
