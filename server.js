@@ -1,22 +1,36 @@
 const express = require('express');
+const sequelize = require('./config/connection.js');
+const path = require('path');
+const session = require('express-session');
+const exphbs = require('express-handlebars');
+const hbs = exphbs.create({});
 // const routes = require('./routes');
 const app = express();
 const PORT = process.env.PORT || 3000;
 // import sequelize connection
-const sequelize = require('./config/connection.js');
+
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
+const sess = 
+{
+    secret: 'Super secret secret',
+    cookies: {},
+    resave: false,
+    saveUnitialized: true,
+    store: new SequelizeStore(
+    {
+        db: sequelize
+    })
+}
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-//Loads the handlebars module
-const handlebars = require('express-handlebars');
-
+app.use(session(sess));
 //Sets our app to use the handlebars engine
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 //Sets handlebars configurations (we will go through them later on)
-app.engine('handlebars', handlebars({
-layoutsDir: __dirname + '/views/layouts',
-}));
 
 app.use(express.static('public'))
 
