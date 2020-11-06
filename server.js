@@ -1,6 +1,9 @@
 const express = require('express');
+// const routes = require('./routes');
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000;
+// import sequelize connection
+const sequelize = require('./config/connection.js');
 
 //Loads the handlebars module
 const handlebars = require('express-handlebars');
@@ -12,8 +15,6 @@ app.engine('handlebars', handlebars({
 layoutsDir: __dirname + '/views/layouts',
 }));
 
-
-
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
@@ -21,4 +22,12 @@ app.get('/', (req, res) => {
 res.render('main', {layout : 'index'});
 });
 
-app.listen(port, () => console.log(`App listening to port ${port}`));
+// sync sequelize models to the database, then turn on the server
+sequelize.sync({ force: false })
+.then(() =>
+{
+    app.listen(PORT, () =>
+    {
+        console.log(`App listening to port ${PORT}`);
+    });
+});
