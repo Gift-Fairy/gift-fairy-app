@@ -5,6 +5,9 @@ const PORT = process.env.PORT || 3000;
 // import sequelize connection
 const sequelize = require('./config/connection.js');
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 //Loads the handlebars module
 const handlebars = require('express-handlebars');
 
