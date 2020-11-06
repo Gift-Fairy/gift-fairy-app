@@ -36,7 +36,7 @@ app.use(express.static('public'))
 
 app.get('/', (req, res) => {
 //Serves the body of the page aka "main.handlebars" to the container //aka "index.handlebars"
-res.render('index');
+res.send('./index.html');
 });
 
 // sync sequelize models to the database, then turn on the server
