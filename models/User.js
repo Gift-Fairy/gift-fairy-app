@@ -5,12 +5,24 @@ class User extends Model {}
 
 User.init(
 {
+
+
     id:
     {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
         autoIncrement: true
+    },
+    firstName:
+    {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    lastName:
+    {
+        type: DataTypes.STRING,
+        allowNull: false,
     },
     email:
     {
@@ -30,8 +42,20 @@ User.init(
         {
             len: [1]
         }
+    },
+    
+    dob: 
+    { 
+        type: DataTypes.DATE, 
+        allowNull: false,
+        validate:
+        {
+            isDate: true
+        }
     }
+
 },
+
 {
     sequelize,
     timestamps: false,
