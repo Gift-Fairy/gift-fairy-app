@@ -31,12 +31,6 @@ app.use(session(sess));
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 //Sets handlebars configurations (we will go through them later on)
-<<<<<<< HEAD
-app.engine('handlebars', handlebars({
-layoutsDir: `${__dirname}/views/layouts`
-}));
-=======
->>>>>>> 220b340bb983564a1854ad61e22b2851d4d759d5
 
 app.use(express.static('public'))
 
