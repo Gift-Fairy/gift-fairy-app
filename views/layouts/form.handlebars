@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gift Fairy</title>
+    <!-- css stylesheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" href="/css/form.css" />
+
+    <!-- scripts -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="/js/scripts.js"></script>
+
+</head>
+
+<body>
+    <!-- input form for the individual -->
+    {{>register}}
+
+    <!-- profiles section? -->
+    <div class="column is-fullwidth pt-6 is-centered">
+        <section id="profile-container">
+
+            <!-- ## handlebar for profiles carousel-->
+            {{>profiles}}
+
+        </section>
+    </div>
+
+    <!-- in case we have another section to add -->
+    <div class="column is-fullwidth pt-6 is-centered">
+        <section id="profile-container">
+
+        </section>
+    </div>
+
+
+    <!-- bulma calendar ext in case we need it -> 'https://creativebulma.net/product/calendar/demo' -->
+    <script src="~bulma-calendar/dist/js/bulma-calendar.min.js"></script>
+    <script src="/js/form.js"></script>
+
+</body>
+
+</html>
