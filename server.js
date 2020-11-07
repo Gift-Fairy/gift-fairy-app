@@ -4,7 +4,7 @@ const path = require('path');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const hbs = exphbs.create({});
-// const routes = require('./routes');
+const routes = require('./controllers');
 const app = express();
 const PORT = process.env.PORT || 3000;
 // import sequelize connection
@@ -32,12 +32,16 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 //Sets handlebars configurations (we will go through them later on)
 
-app.use(express.static('public'))
 
-app.get('/', (req, res) => {
-//Serves the body of the page aka "main.handlebars" to the container //aka "index.handlebars"
-res.render('main', {layout: 'index'});
-});
+// turn on routes
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(routes);
+
+// app.get('/', (req, res) => 
+// {
+//     //Serves the body of the page aka "main.handlebars" to the container //aka "index.handlebars"
+//     res.render('main', {layout: "index"});
+// });
 
 // sync sequelize models to the database, then turn on the server
 sequelize.sync({ force: false })
