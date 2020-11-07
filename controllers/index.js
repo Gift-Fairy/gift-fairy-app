@@ -1,8 +1,10 @@
 const router = require('express').Router();
 
 const homeRoutes = require('./home-routes.js');
+const formRoutes = require('./form-routes.js');
 
 router.use('/', homeRoutes);
+router.use('/form', formRoutes);
 
 router.use((req, res) =>
 {
