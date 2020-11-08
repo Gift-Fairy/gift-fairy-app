@@ -5,6 +5,7 @@ body {
 .navbar {
    /* background-color:rgba(235,244,243, 90%); */
    padding: .3em;
+   height: 75%;
 }
 
 .navbar-menu {
