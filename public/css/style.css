@@ -39,6 +39,11 @@ body {
     color: #ff7e67;
 }
 
+.notification a:not(.button):not(.dropdown-item) { 
+    text-decoration: none;
+    color: #ff7e67;
+}
+
 .tile-shadow {
   transition: box-shadow .3s;
 }
