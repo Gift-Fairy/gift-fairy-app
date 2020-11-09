@@ -5,7 +5,7 @@ router.get('/', (req, res) =>
 {
     Wishitem.findAll(
     {
-        attributes: {itemName}
+        attributes: ['itemName']
     })
     .then(dbItemData => res.json(dbItemData))
     .catch(err =>
@@ -23,7 +23,7 @@ router.get('/:id', (req, res) =>
         {
             id: req.params.id
         },
-        attributes: {itemName}
+        attributes: ['itemName']
     })
     .then(dbItemData => res.json(dbItemData))
     .catch(err =>
