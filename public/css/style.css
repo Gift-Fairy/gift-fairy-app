@@ -48,7 +48,7 @@ body {
 }
 
 #profile-container {
-    color: white;
+    color: black;
     /* background-color: white; */
     /* padding-bottom: 20px; */
 }
@@ -65,15 +65,20 @@ body {
     right: 0;
     background: #fff center center no-repeat;
     background-size: 20px 20px;
+    margin-right: 5px;
 }
 
+.slider-navigation-previous {
+    margin-left: 5px;
+}
 
-
+.is-horizontal-center {
+    justify-content: center;
+  }
 .card {
     background-color: transparent;
     box-shadow: none;
     text-align: center;
-
 }
 .footer {
     padding:2rem 1.5rem 2rem;
