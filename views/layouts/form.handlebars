@@ -17,27 +17,32 @@
 </head>
 
 <body>
+    <div class="container">
+        {{{body}}}
+    </div>
+
    {{>loginheader}}
 
     <!-- input form for the individual -->
     {{>register}}
 
-    <!-- profiles section? -->
-    <div class="column is-fullwidth pt-6 is-centered">
+    <!-- profiles section -->
         <section id="profile-container">
+            <div class="column is-fullwidth pt-6 is-centered">
 
             <!-- ## handlebar for profiles carousel-->
             {{>profiles}}
 
-        </section>
-    </div>
+    </div>        
+    </section>
 
-    <!-- in case we have another section to add -->
-    <div class="column is-fullwidth pt-6 is-centered">
-        <section id="profile-container">
 
-        </section>
+    <!-- wishlist section -->
+        <section id="wishlist-container">
+            <div class="column is-fullwidth pt-6 is-centered">
+
     </div>
+    </section>
 
 
     <!-- bulma calendar ext in case we need it -> 'https://creativebulma.net/product/calendar/demo' -->
