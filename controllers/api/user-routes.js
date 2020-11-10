@@ -44,7 +44,7 @@ router.post('/login', (req, res) => {
     // expects {email, and password}
     User.findOne({
       where: {
-        email: req.body.email,
+        email: req.body.email
       }
     }).then(dbUserData => {
       if (!dbUserData) {
@@ -104,5 +104,7 @@ router.post('/login', (req, res) => {
         res.status(500).json(err);
       });
   });
+
+
 
   module.exports = router;
