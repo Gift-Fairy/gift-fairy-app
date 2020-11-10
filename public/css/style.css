@@ -39,6 +39,10 @@ body {
     color: #ff7e67;
 }
 
+#process-container p:hover {
+    color: #68b0ab;
+}
+
 .notification a:not(.button):not(.dropdown-item) { 
     text-decoration: none;
     color: #ff7e67;
