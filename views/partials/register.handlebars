@@ -1,29 +1,33 @@
-
-  <section class="hero is-fullheight" id="form">
-    <div class="hero-body">
-      <div class="container">
-        <div class="columns is-multiline is-centered is-mobile">
-          <!-- registration form -->
-          <div class="column is-bordered is-6 is-centered">
-            <form id="fs-frm" name="registration-form" accept-charset="utf-8" action="https://formspree.io/f/{form_id}"
-              method="post" class="box">
-              <fieldset id="fs-frm-inputs">
-                <!-- first and last name input w validation -->
-                <div class="py-5 px-3">
-                  <label for="full-name" class="title">Full Name</label>
-                  <div class="control">
-                    <input type="text" name="name" id="full-name" placeholder="e.g. Jane Fairwell" required="">
-                    <!-- email address input w validation -->
-                    <div class="py-5">
-                      <label for="email-address" class="title">Email Address</label>
-                      <div class="field">
-                        <input type="email" name="_replyto" id="email-address" placeholder="e.g. jane@gmail.com"
-                          required="">
-                      </div>
+<section class="hero is-fullheight" id="form">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-multiline is-centered is-mobile">
+        <!-- registration form -->
+        <div class="column is-bordered is-6 is-centered">
+          <form id="fs-frm" name="registration-form" accept-charset="utf-8" action="https://formspree.io/f/{form_id}"
+            method="post" class="box">
+            <fieldset id="fs-frm-inputs">
+              <!-- first and last name input w validation -->
+              <div class="py-5 px-3">
+                <label for="full-name" class="title">Full Name</label>
+                <div class="control">
+                  <input type="text" name="name" id="full-name" placeholder="e.g. Jane Fairwell" required="">
+                  <!-- email address input w validation -->
+                  <div class="py-5">
+                    <label for="email-address" class="title">Email Address</label>
+                    <div class="field">
+                      <input type="email" name="_replyto" id="email-address" placeholder="e.g. jane@gmail.com"
+                        required="">
                     </div>
                   </div>
+                    <label for="birthdate" class="title">Birthdate</label>
+                    <div class="field">
+                      <input type="date" name="birthdate" id="birthdate"
+                        required="">
+                  </div>
                 </div>
-              </fieldset>
+              </div>
+            </fieldset>
 
               <!-- <input type="hidden" name="_subject" id="email-subject" value="Registration Form Submission">
               </fieldset> -->
