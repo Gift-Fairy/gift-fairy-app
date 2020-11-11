@@ -10,8 +10,6 @@ class User extends Model {
 
 User.init(
 {
-
-
     id:
     {
         type: DataTypes.INTEGER,
@@ -53,7 +51,6 @@ User.init(
             isDate: true
         }
     }
-
 },
 {
     hooks: {
