@@ -1,0 +1,89 @@
+    <section class="container is-desktop">
+        <div class="columns is-10">
+            <div class="column mx-6">
+                <form action="https://formspree.io/f/xgepzwkk" method="POST">
+                    <div class="field">
+                        <label for="" class="label">Category:</label>
+                        <div class="field has-addons">
+                            <div class="control is-expanded">
+                                <div class="select is-fullwidth">
+                                    <select name="wishlist item">
+                                        <option value="Accessories">Accessories</option>
+                                        <option value="Apparel">Apparel</option>
+                                        <option value="Electronics">Electronics</option>
+                                        <option value="Cooking Tools">Cooking Tools</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <button type="submit" class="button is-primary">Choose</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="" class="label">Preferred brand:</label>
+                        <input type="text" placeholder="" class="input is-" required="">
+                    </div>
+                    <div class="field">
+                        <label for="" class="label">Item name:</label>
+                        <input type="text" placeholder="" class="input" required="">
+                    </div>
+                    <div class="field">
+                        <label for="" class="label">Comments:</label>
+                        <input type="message" placeholder="Describe the exact item further" class="input" required="">
+                    </div>
+                    <div class="pb-5 has-text-centered is-medium">
+                        <input type="submit" value="Add Item" id="register">
+                    </div>
+                </form>
+            </div>
+
+            <!-- panel for saved wishlist items -->
+            <div class="column">
+                <article class="panel is-desktop">
+                    <p class="panel-heading">
+                        Your Wishlist!
+                    </p>
+                    <p class="panel-tabs">
+                        <a class="is-active">All</a>
+                        <a>Fashion</a>
+                        <a>Electronics</a>
+                        <a>Cooking</a>
+                        <a>Home</a>
+                    </p>
+                    <div class="panel-block">
+                        <p class="control has-icons-left">
+                            <input class="input is-primary" type="text" placeholder="Search">
+                            <span class="icon is-left">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <a class="panel-block">
+                        <span class="panel-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                        Dell Latitude 14"
+                    </a>
+                    <a class="panel-block">
+                        <span class="panel-icon">
+                            <i class="far fa-check-circle"></i>
+                        </span>
+                        Creuset dutch oven
+                    </a>
+                    <a class="panel-block">
+                        <span class="panel-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                        Apple iPhone 12
+                    </a>
+                    <a class="panel-block">
+                        <span class="panel-icon">
+                            <i class="far fa-check-circle"></i>
+                        </span>
+                        Converse sneakers
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>

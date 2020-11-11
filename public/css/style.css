@@ -1,10 +1,12 @@
 body {
     background-color:rgba(104,176,172, 30%);
+    margin:0 auto;
 }
 
 .navbar {
    /* background-color:rgba(235,244,243, 90%); */
    padding: .3em;
+   height: 75%;
 }
 
 .navbar-menu {
@@ -37,6 +39,15 @@ body {
     color: #ff7e67;
 }
 
+#process-container p:hover {
+    color: #68b0ab;
+}
+
+.notification a:not(.button):not(.dropdown-item) { 
+    text-decoration: none;
+    color: #ff7e67;
+}
+
 .tile-shadow {
   transition: box-shadow .3s;
 }
@@ -46,7 +57,7 @@ body {
 }
 
 #profile-container {
-    color: white;
+    color: black;
     /* background-color: white; */
     /* padding-bottom: 20px; */
 }
@@ -63,15 +74,20 @@ body {
     right: 0;
     background: #fff center center no-repeat;
     background-size: 20px 20px;
+    margin-right: 5px;
 }
 
+.slider-navigation-previous {
+    margin-left: 5px;
+}
 
-
+.is-horizontal-center {
+    justify-content: center;
+  }
 .card {
     background-color: transparent;
     box-shadow: none;
     text-align: center;
-
 }
 .footer {
     padding:2rem 1.5rem 2rem;
