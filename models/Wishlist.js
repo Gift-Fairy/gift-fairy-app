@@ -12,11 +12,6 @@ Wishlist.init(
         primaryKey: true,
         autoIncrement: true
     },
-    listName:
-    {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
     userID:
     {
         type: DataTypes.INTEGER,

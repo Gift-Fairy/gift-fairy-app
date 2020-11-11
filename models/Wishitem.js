@@ -21,13 +21,23 @@ Wishitem.init(
     {
         type: DataTypes.INTEGER,
         allowNull: false,
-        references:
-        {
-            model: 'wishlist',
-            key: 'id'
-        }
+        
+    },
+    brandName:
+    {
+        type: DataTypes.STRING,
+        allowNull: false,
+    
+    },
+    category:
+    {
+        type: DataTypes.STRING,
+        allowNull: false,
+        
     }
 },
+
+//add brand name and category 
 {
     sequelize,
     timestamps: false,
