@@ -53,9 +53,11 @@ router.post('/email', (req, res) =>
     });
 });
 
-// router.get('/login', (req, res) =>
-// {
-//     res.render('main', {layout: 'form'});
-// });
+router.get('/login', (req, res) =>
+{
+    res.render('main', {layout: 'loginform'});
+    //res.render('login');
+
+});
 
 module.exports = router;
