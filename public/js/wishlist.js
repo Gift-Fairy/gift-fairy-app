@@ -16,4 +16,4 @@ function createProfile() {
     // +Create and add id for profile functionality
     $('#').on('click', function (event) {
         event.preventDefault();   
-    });
+    })};
