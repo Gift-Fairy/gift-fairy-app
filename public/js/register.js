@@ -23,6 +23,7 @@ async function register(event)
     if(response.ok)
     {
         console.log('Success', response);
+        console.dir(response);
     }
     else
     {
