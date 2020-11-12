@@ -2,6 +2,15 @@ body {
   background-color:rgba(104,176,172, 30%);
 }
 
+body .button.is-primary {
+    background-color: #ff7e67e6;
+}
+
+body .button.is-primary:hover {
+  background-color: #68b0ac;
+  color: white;
+}
+
 #fs-frm input,
 #fs-frm select,
 #fs-frm fieldset,
@@ -73,7 +82,9 @@ body {
 
 #wishlist [type="submit"],
 #register [type="submit"],
-#cat-btn {
+#cat-btn,
+#save-btn,
+#share-btn {
   background-color: #ff7e67e6;
 }
 
@@ -81,7 +92,8 @@ body {
 #choose-category [type="submit"]:hover,
 #wishlist [type="submit"]:hover,
 #form [type="submit"]:hover,
-#cat-btn:hover {
+#cat-btn:hover, 
+#share-btn:hover {
   background-color: #68b0ac;
   color: white;
 }
@@ -90,7 +102,9 @@ body {
 #choose-category [type="submit"]:focus,
 #wishlist [type="submit"]:focus,
 #form [type="submit"]:focus,
-#cat-btn:focus {
+#cat-btn:focus,
+#save-btn:focus,
+#share-btn:focus {
   margin-bottom: 0;
   background-color: #006a70;
   color: white;
