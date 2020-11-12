@@ -22,39 +22,26 @@
 
     {{>loginheader}}
 
-    <style>
-        .parallax {
-          /* The image used */
-          background-image: url("/css/img/shopping\ group.jpg");
-    
-          /* Set a specific height */
-          min-height: 600px;
-    
-          /* Create the parallax scrolling effect */
-          background-attachment: fixed;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-        }
-
-      </style>
-
-    <div class="parallax">
-
     <div class="container">
         {{{body}}}
     </div>
-    
-    <section>
-        <div>
 
-    <!-- register form for the individual -->
-    {{>register}}
+    <!-- userinfo section -->
+    <section class="container is-fullwidth px-5 py-6" id="wishlist-container">
+    
+    {{>userinfo}}
+    
+    </section>
+
+    <!-- wishlist section -->
+    <section class="container">
+        <div class="column is-fullwidth pt-6 is-centered">
+
+    <!-- wishlist input section and current wishlist -->
+    {{>wishlist}}
 
         </div>
     </section>
-    
-    </div>
 
     <!-- bulma calendar ext in case we need it -> 'https://creativebulma.net/product/calendar/demo' -->
     <script src="~bulma-calendar/dist/js/bulma-calendar.min.js"></script>
@@ -63,6 +50,7 @@
     <script type="text/javascript"
         src="/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+    <script src="/js/add-wishitem.js"></script>
     <script src="/js/register.js"></script>
 </body>
 

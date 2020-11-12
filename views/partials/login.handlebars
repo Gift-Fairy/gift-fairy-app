@@ -1,35 +1,35 @@
-<section class="hero is-fullheight" id="form">
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns is-multiline is-centered is-mobile">
-                <!-- login form -->
-                <div class="column is-bordered is-6 is-centered">
-                    <form id="fs-frm" name="registration-form" accept-charset="utf-8"
-                        action="https://formspree.io/f/{form_id}" method="post" class="box">
-                        <fieldset id="fs-frm-inputs">
-                            <!-- email input w validation -->
-                            <div class="py-5 px-3">
+    <!-- login form -->
+    <section class="hero is-fullheight" id="login">
+        <div class="hero-body">
+            <div class="container is-desktop px-5 py-6">
+                <div class="title has-text-centered">
+                    <strong>Gift Fairy Login</strong>
+                </div>
+                <p class="is-size-6-fullhd has-text-centered is-mobile pb-3">Welcome back, let's find your wishlist!</p>
+                <div class="columns is-multiline is-centered">
+                    <!-- registration form -->
+                    <div class="column is-bordered is-6 is-centered">
+                        <form id="fs-frm" action="" method="POST" name="registration-form" accept-charset="utf-8">
+                            <!-- email address input -->
+                            <div class="py-5">
                                 <label for="email-address" class="title">Email Address</label>
                                 <div class="field">
-                                    <input type="email" name="_replyto" id="email-address"
+                                    <input type="email" name="replyto" id="email-address"
                                         placeholder="e.g. jane@gmail.com" required="">
                                 </div>
                             </div>
-                            <!-- password input -->
-                            <div class="py-5 px-3">
-                                <label for="email-address" class="title">Email Address</label>
-                                <div class="field">
-                                    <input type="email" name="_replyto" id="email-address" placeholder="jane@gmail.com"
-                                        required="">
-                                </div>
+                            <!-- password field - do we need validation? -->
+                            <div class="field">
+                                <label for="" class="label">Password</label>
+                                <input type="password" oninput="checkPassword();" placeholder="*******" class="input"
+                                    required="">
                             </div>
-                        </fieldset>
-                        <div class="pb-5 has-text-centered is-medium">
-                            <input type="submit" value="Login" id="login">
-                        </div>
-                    </form>
+                            <div class="pt-2 has-text-centered">
+                                <input type="submit" class="button is-primary" value="Login" id="register">
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
