@@ -1,142 +1,3 @@
-    <section class="hero is-fullheight" id="form">
-        <div class="hero-body">
-            <div class="container is-desktop px-5 py-6">
-                <div class="title has-text-centered">
-                    <strong>Register</strong>
-                </div>
-                <p class="is-size-6-fullhd has-text-centered is-mobile pb-3">It's easier to save your profile and share it anytime and anywhere.</p>
-                <div class="columns is-multiline is-centered">
-                    <!-- registration form -->
-                    <div class="column is-bordered is-6 is-centered">
-                        <form id="fs-frm" name="registration-form" accept-charset="utf-8" class="box">
-                            <fieldset id="fs-frm-inputs">
-                                <!-- first and last name input -->
-                                <div class="py-5 px-3">
-                                    <label for="full-name" class="title">Full Name</label>
-                                    <div class="control">
-                                        <input type="text" name="name" id="full-name" placeholder="e.g. Jane Fairwell"
-                                            required="">
-                                        <!-- birthday input -->
-                                        <div class="py-5">
-                                            <label for="date" class="title">Birthday</label>
-                                            <div class="field">
-                                                <input type="date" name="birthdate" id="birthdate"
-                                                required="">
-                                            </div>
-                                            <!-- email address input -->
-                                            <div class="py-5">
-                                                <label for="email-address" class="title">Email Address</label>
-                                                <div class="field">
-                                                    <input type="email" name="replyto" id="email-address"
-                                                        placeholder="e.g. jane@gmail.com" required="">
-                                                </div>
-                                            </div>
-                                            <!-- password field - do we need validation? -->
-                                            <div class="field">
-                                                <label for="" class="label">Password</label>
-                                                <input type="password" oninput="checkPassword();" placeholder="*******"
-                                                    class="input" required="">
-                                            </div>
-                                            <div class="pt-2 has-text-centered">
-                                                <input type="submit" class="button is-primary" value="Register" id="register">
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- profiles section -->
-    <section class="container is-desktop px-5 py-6" id="wishlist-container">
-        <!-- add individual details -->
-        <div class="container" id="userdetails">
-        <div class="title has-text-centered"><strong>Make it easier for your friends and family to get you gifts:</strong>
-        </div>
-        <form class="is-10 is-multiline is-centered is-mobile">
-            <div class="field is-horizontal">
-                <div class="field-label is-normal">
-                    <label class="label">Shoe Size</label>
-                </div>
-                <div class="field-body is-2">
-                    <div class="field">
-                        <input type="text" placeholder="38 or 8.5" class="input">
-                    </div>
-                    <div class="field-label is-normal">
-                        <label class="label">Shirt Size:</label>
-                    </div>
-                    <p>
-                    <div class="field">
-                        <input class="input" type="text" placeholder="34">
-                    </div>
-                    </p>
-                </div>
-            </div>
-            <div class="field is-horizontal">
-                <div class="field-label is-normal">
-                    <label class="label">Favorite Colors:</label>
-                </div>
-                <div class="field-body is-3">
-                    <div class="field">
-                        <input type="text" placeholder="38 or 8.5" class="input">
-                    </div>
-                    <div class="field-label is-normal">
-                        <label class="label">Favorite Brands:</label>
-                    </div>
-                    <p>
-                    <div class="field">
-                        <input class="input" type="text" placeholder="34">
-                    </div>
-                    </p>
-                </div>
-            </div>
-        </form>
-        </div>
-
-        <!-- Select Categories -->
-        <section class="container is-desktop px-5 py-6" id="favorites">
-            <div class="title has-text-centered"><strong>Select 3 Favorite Categories!</strong>
-            </div>
-            <form class="is-multiline is-centered is-12">
-                <div class="field is-horizontal">
-                    <div class="field-label is-normal is-4">
-                        <label class="label">Category 1</label>
-                    </div>
-                    <div class="field-body">
-                        <div class="field">
-                            <input type="text" placeholder="38 or 8.5" class="input" id="cat0">
-                        </div>
-                    </div>
-                    <div class="field-label is-normal is-4">
-                        <label class="label">Category 2</label>
-                    </div>
-                    <div class="field-body">
-                        <div class="field">
-                            <input class="input" type="text" placeholder="34" id="cat1">
-                        </div>
-                    </div>
-                    <div class="field-label is-normal is-4">
-                        <label class="label">Category 3</label>
-                    </div>
-                    <div class="field-body">
-                        <div class="field">
-                            <input type="text" placeholder="38 or 8.5" class="input" id="cat2">
-                        </div>
-                    </div>
-                </div>
-            </form>
-            <!-- category button -->
-            <div class="pt-2 has-text-centered">
-                <input type="submit" class="button is-primary" value="Save Categories" id="cat-btn">
-            </div>
-        </section>
-
         <!-- detailed wishlist -->
         <section class="container" id="wishlist">
             <div class="column is-fullwidth pt-6 is-centered">
@@ -195,12 +56,6 @@
                                 <input type="submit" class="button is-primary" value="Add Item" id="add-item">
                             </div>
                         </form>
-
-                        <div class="notification is-invisible">
-                            <button class="delete"></button>
-                            Lorem ipsum
-                        </div>
-
                     </div>
 
                     <!-- panel for saved wishlist items -->
@@ -296,21 +151,62 @@
 
             <hr>
 
-            <!-- save or share wishlist buttons -->
-            <div class="container py-5 box">
+            <!-- wishlist buttons -->
+            <div class="container py-5 box" id="wishlist-btns">
                 <div class="is-horizontal">
                     <div class="columns is-6">
+                        <!-- wishlist complete button -->
                         <div class="column">
                             <div class="has-text-centered">
-                                <input type="submit" class="button is-primary" value="Save Wishlist" id="save-wishlist">
+                                <input type="submit" class="button is-primary" value="Done" id="save-btn">
                             </div>
                         </div>
-                        <div class="column">
+                        <!-- modal to share wishlist via email or download -->
+                        <div class="column" id="email">
                             <div class="has-text-centered">
-                                <input type="submit" class="button is-primary" value="Share Wishlist"
-                                    id="share-wishlist">
+                                <div id="modal" class="modal">
+                                    <div class="modal-background"></div>
+                                    <div class="modal-content">
+                                        <div class="box">                                                            
+                                            <div class="columns is-6">
+                                                <div class="column is-6">
+                                                    <article class="media">
+                                                        <div class="title has-text-centered">
+                                                            <p>Hey {{firstName}}, let's share your list!</p>
+                                                        </div>
+                                                    </article>
+                                                    <div class="column">
+                                                        <label class="label">Message</label>
+                                                          <textarea class="textarea" placeholder="Textarea"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="media-content">
+                                                    <div class="content">
+                                                            <div class="column is-3">
+                                                                <label class="label">Friend's Name</label>
+                                                                    <input class="is-active" type="name" placeholder="" value="Jane">
+                                                            </div>
+                                                            <div class="column is-3">
+                                                                <label class="label">Email</label>
+                                                                    <input class="is-active" type="email" placeholder="Email input" value="jane@gmail.com">
+                                                            </div>
+                                                        <div class="column is-2 has-text-centered">
+                                                            <div class="control">
+                                                                <button class="button is-primary" id="send-email">Send Email</button>
+                                                            </div>
+                                                        </div>
+                                                            </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                    <button class="modal-close is-large" aria-label="close"></button>
+                                </div>
+                                <button class="button is-primary" id="share-btn">Share Wishlist</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
