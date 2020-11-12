@@ -1,27 +1,21 @@
 const { Wishlist } = require('../models'); 
 
-const wishListData = [
-
+const wishListData = 
+[
     {
         id: '1',
-        listName: "Birthday",
-        userID: "1",
+        user_id: "1",
     },
     {
         id: '2',
-        listName: "Valentines",
-        userID: "2",
-    
+        user_id: "2",
     },
     {
         id: '3',
-        listName: "Christmas",
-        userID: "3",
+        user_id: "3",
     }
-    
-    
-    ];
-    
-    const seedWishList = () => Wishlist.bulkCreate(wishListData); 
-    
-    module.exports = seedWishList; 
+];
+
+const seedWishList = () => Wishlist.bulkCreate(wishListData); 
+
+module.exports = seedWishList; 

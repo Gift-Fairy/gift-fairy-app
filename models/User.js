@@ -2,11 +2,13 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection.js');
 const bcrypt = require('bcrypt'); 
 
-class User extends Model {
-    checkPassword(loginPw) {
+class User extends Model 
+{
+    checkPassword(loginPw) 
+    {
         return bcrypt.compareSync(loginPw, this.password);
-      }}
-
+    }
+}
 
 User.init(
 {
@@ -17,7 +19,7 @@ User.init(
         primaryKey: true,
         autoIncrement: true
     },
-    fullName:
+    full_name:
     {
         type: DataTypes.STRING,
         allowNull: false,
@@ -41,7 +43,6 @@ User.init(
             len: [4]
         }
     },
-    
     dob: 
     { 
         type: DataTypes.DATE, 
@@ -50,26 +51,47 @@ User.init(
         {
             isDate: true
         }
+    },
+    shirtSize:
+    {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+    shoeSize:
+    {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
+    favoriteColor:
+    {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
+    favoriteBrand:
+    {
+        type: DataTypes.STRING,
+        allowNull: true
     }
 },
 {
-    hooks: {
-      async beforeCreate(newUserData) {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
-      },
-  
-    async beforeUpdate(updatedUserData) {
-      updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
-      return updatedUserData;
-    }
+    hooks: 
+    {
+        async beforeCreate(newUserData) 
+        {
+            newUserData.password = await bcrypt.hash(newUserData.password, 10);
+            return newUserData;
+        },
+        async beforeUpdate(updatedUserData) 
+        {
+            updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+            return updatedUserData;
+        }
     },
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'user'
-  });
+});
   
-  
-  module.exports = User;
+module.exports = User;

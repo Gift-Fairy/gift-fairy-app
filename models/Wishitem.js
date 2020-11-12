@@ -12,18 +12,18 @@ Wishitem.init(
         primaryKey: true,
         autoIncrement: true
     },
-    itemName:
+    item_name:
     {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    listID:
+    user_id:
     {
         type: DataTypes.INTEGER,
         allowNull: false,
         
     },
-    brandName:
+    brand_name:
     {
         type: DataTypes.STRING,
         allowNull: false,
@@ -33,11 +33,8 @@ Wishitem.init(
     {
         type: DataTypes.STRING,
         allowNull: false,
-        
     }
 },
-
-//add brand name and category 
 {
     sequelize,
     timestamps: false,

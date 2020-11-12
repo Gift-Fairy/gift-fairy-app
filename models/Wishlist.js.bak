@@ -12,7 +12,7 @@ Wishlist.init(
         primaryKey: true,
         autoIncrement: true
     },
-    userID:
+    user_id:
     {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -21,6 +21,26 @@ Wishlist.init(
             model: 'user',
             key: 'id'
         }
+    },
+    shirtSize:
+    {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+    shoeSize:
+    {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
+    favoriteColor:
+    {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
+    favoriteBrand:
+    {
+        type: DataTypes.STRING,
+        allowNull: true
     }
 },
 {

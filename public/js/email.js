@@ -1,6 +1,6 @@
 function sendEmail(email, link, name)
 {
-    const response = fetch('/email',
+    const response = fetch('/api/list/email',
     {
         method: 'POST',
         body: JSON.stringify(
