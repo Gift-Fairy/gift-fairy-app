@@ -60,8 +60,8 @@
 
                     <!-- panel for saved wishlist items -->
                     <div class="column" id="panel">
-                        <article class="panel is-desktop">
-                            <p class="panel-heading is-primary">
+                        <article class="panel is-desktop is-white">
+                            <p class="panel-heading">
                                 Your Wishlist!
                             </p>
 
@@ -71,11 +71,13 @@
                                         <li class="tab is-active" id="catorigin" onclick="openTab(event,'content1')">
                                             <a>All</a></li>
                                         <li class="tab" id="origin0" onclick="openTab(event,'content2')">
-                                            <a id="catorigin0">Shoes</a></li>
+                                            <a id="catorigin0">Electronics</a></li>
                                         <li class="tab" id="origin1" onclick="openTab(event,'content3')">
                                             <a id="catorigin1">Fashion</a></li>
                                         <li class="tab" id="origin2" onclick="openTab(event,'content4')">
-                                            <a id="catorigin2">Computer</a></li>
+                                            <a id="catorigin2">Home & Garden</a></li>
+                                        <li class="tab" id="origin2" onclick="openTab(event,'content4')">
+                                            <a id="catorigin2">Pets</a></li>
                                     </ul>
                                 </div>
                             </nav>
@@ -179,6 +181,23 @@
                                                         <label class="label">Message</label>
                                                           <textarea class="textarea" placeholder="Textarea"></textarea>
                                                     </div>
+                                                    <div class="column is-6 has-text-centered">
+                                                        <a class="button is-2 is-small is-facebook">
+                                                            <span class="icon">
+                                                              <i class="fab fa-facebook fa-sm"></i>
+                                                            </span>
+                                                        </a>
+                                                        <a class="button is-2 is-small is-instagram">
+                                                            <span class="icon">
+                                                              <i class="fab fa-instagram fa-sm"></i>
+                                                            </span>
+                                                        </a>
+                                                        <a class="button is-2 is-small is-twitter">
+                                                            <span class="icon">
+                                                              <i class="fab fa-twitter fa-sm"></i>
+                                                            </span>
+                                                        </a>
+                                                    </div>
                                                 </div>
                                                 <div class="media-content">
                                                     <div class="content">
@@ -190,12 +209,12 @@
                                                                 <label class="label">Email</label>
                                                                     <input class="is-active" type="email" placeholder="Email input" value="jane@gmail.com">
                                                             </div>
-                                                        <div class="column is-2 has-text-centered">
-                                                            <div class="control">
-                                                                <button class="button is-primary" id="send-email">Send Email</button>
+                                                            <div class="column is-2 has-text-centered">
+                                                                <div class="control">
+                                                                    <button class="button is-primary" id="send-email">Send Email</button>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                            </div>
                                                     </div>
                                                 </div>
                                             </article>
