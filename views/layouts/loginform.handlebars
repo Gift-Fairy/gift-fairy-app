@@ -19,6 +19,8 @@
 
 <body>
 
+ {{>loginheader}}
+
     <style>
         .parallax {
           /* The image used */
@@ -34,15 +36,9 @@
           background-size: cover;
         }
 
-        #register {
-            background-color: #ff7e67e6;
-        }
-
       </style>
 
     <div class="parallax">
-
-    {{>loginheader}}
 
     <div class="container">
         {{{body}}}
