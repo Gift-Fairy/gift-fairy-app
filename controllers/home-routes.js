@@ -5,7 +5,7 @@ const { User } = require('../models');
 
 router.get('/', (req, res) =>
 {
-    console.log(req.session); 
+    console.log(req.session.id); 
     res.render('main', {layout: "index"});
 });
 
@@ -17,6 +17,11 @@ router.get('/register', (req, res) =>
 router.get('/login', (req, res) =>
 {
     res.render('main', {layout: 'loginform'});
+});
+
+router.get('/list', (req, res) =>
+{
+    res.render('main', {layout: 'fullwishlist'});
 });
 
 // router.get('/list/:id', (req, res) =>

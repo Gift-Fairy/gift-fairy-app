@@ -1,3 +1,4 @@
+// const addWishItem = async (event) =>
 async function addWishItem(event)
 {
     event.preventDefault();
@@ -5,7 +6,17 @@ async function addWishItem(event)
     let category = 'shoe';
     let item_name = 'shoes';
     let brand_name = 'addidas';
-    let list_id = 1;
+    let user_id = 1;
+    let user_id_response = await fetch('/api/users/login',
+    {
+        method: 'GET',
+        headers:
+        {
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await user_id_response.json().id;
+    console.log(data);
     const response = await fetch('/api/items',
     {
         method: 'POST',
@@ -14,7 +25,7 @@ async function addWishItem(event)
             category,
             item_name,
             brand_name,
-            list_id
+            user_id
         }),
         headers:
         {
