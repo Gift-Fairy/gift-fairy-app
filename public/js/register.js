@@ -1,10 +1,12 @@
 async function register(event)
 {
     event.preventDefault();
-    let full_name = document.querySelector('#full-name').value;
-    let email = document.querySelector('#email-address').value;
-    let password = document.querySelector('#register_password').value;
-    let dob = document.querySelector('#birthdate').value;
+    let full_name = document.querySelector('#full-name').value.trim();
+    let email = document.querySelector('#email-address').value.trim();
+    let password = document.querySelector('#register_password').value.trim();
+    let dob = document.querySelector('#birthdate').value.trim();
+
+
     const response = await fetch('/api/users/',
     {
         method: 'POST',
