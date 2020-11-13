@@ -110,21 +110,14 @@ hr {
 
 #fs-frm [type="submit"]:hover, 
 #choose-category [type="submit"]:hover,
-#wishlist [type="submit"]:hover,
-#form [type="submit"]:hover,
-#cat-btn:hover, 
-#share-btn:hover {
+#form [type="submit"]:hover {
   background-color: #68b0ac;
   color: white;
 }
 
 #fs-frm [type="submit"]:focus, 
 #choose-category [type="submit"]:focus,
-#wishlist [type="submit"]:focus,
-#form [type="submit"]:focus,
-#cat-btn:focus,
-#save-btn:focus,
-#share-btn:focus {
+#form [type="submit"]:focus {
   margin-bottom: 0;
   background-color: #006a70;
   color: white;
@@ -132,12 +125,4 @@ hr {
 
 #fs-frm select {
   text-transform: none;
-}
-
-.tabcontent p {
-  display: none;
-}
-
-.tabcontent p.is-active {
-  display: block;
 }
