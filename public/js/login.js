@@ -15,7 +15,7 @@ async function loginFormHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace('/list/');
+        document.location.replace('/list');
       } else {
         alert(response.statusText);
       }

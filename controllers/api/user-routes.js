@@ -198,4 +198,35 @@ router.post('/login', (req, res) => {
       });
   });
 
+  router.put('/preferences/:id', (req, res) =>
+  {
+    User.update(
+    {
+      shirt_size: req.body.shirt_size,
+      shoe_size: req.body.shoe_size,
+      favorite_color: req.body.favorite_color,
+      favorite_brand: req.body.favorite_brand
+    },
+    {
+      where:
+      {
+        id: req.params.id
+      }
+    })
+    .then(dbUserData =>
+    {
+      if (!dbUserData) 
+      {
+        res.status(404).json({ message: 'Invalid Credentials' });
+        return;
+      }
+      res.json(dbUserData);
+    })
+    .catch(err => 
+    {
+      console.log(err);
+      res.status(500).json(err);
+    });
+  });
+
   module.exports = router;

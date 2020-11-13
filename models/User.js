@@ -52,22 +52,22 @@ User.init(
             isDate: true
         }
     },
-    shirtSize:
+    shirt_size:
     {
         type: DataTypes.STRING,
         allowNull: true,
     },
-    shoeSize:
+    shoe_size:
     {
         type: DataTypes.STRING,
         allowNull: true
     },
-    favoriteColor:
+    favorite_color:
     {
         type: DataTypes.STRING,
         allowNull: true
     },
-    favoriteBrand:
+    favorite_brand:
     {
         type: DataTypes.STRING,
         allowNull: true
