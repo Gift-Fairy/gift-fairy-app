@@ -12,6 +12,10 @@ body .button.is-primary:hover {
   color: white;
 }
 
+hr {
+  margin-bottom: 0;
+}
+
 /* Shopping image background with parallax */
 .parallax {
   /* The image used */
