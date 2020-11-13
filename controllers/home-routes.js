@@ -27,13 +27,11 @@ router.get('/list', (req, res) =>
         {
             id: req.session.user_id
         },
-        includes:
-        [
-            {
-                model: Wishitem,
-                attributes:['id', 'brand_name', 'item_name']
-            }
-        ]
+        include:
+        {
+            model: Wishitem,
+            attributes:['id', 'brand_name', 'item_name']
+        }
     })
     .then(dbUserData =>
     {
@@ -45,17 +43,16 @@ router.get('/list', (req, res) =>
 
         // serialize the data
         const data = dbUserData.get({ plain: true });
-        console.log(data);
+        console.log(data.wishitems);
 
         // pass data to template
-        res.render('main', {layout: 'fullwishlist',  data});
+        res.render('main', {layout: 'fullwishlist', data});
     })
     .catch(err =>
     {
         console.log(err);
         res.status(500).json(err);
     })
-    res.render('main', {layout: 'fullwishlist', });
 });
 
 // router.get('/list/:id', (req, res) =>
