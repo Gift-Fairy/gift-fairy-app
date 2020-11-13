@@ -1,19 +1,48 @@
-$(document).ready(function () {
-    $('#profile-container').hide();
-    $('#wishlist-container').hide();
+$('#user-info').click(function () {
+
+    // input in email inbox
+    var user = {};
+    user.shoe = $('').val().trim();
+    user.pant = $('').val().trim();
+    user.shirt = $('').val().trim();
+    user.brands = $('').val().trim();
+
+    // adding user details to the wishlist
+    $(function () {
+
+    });
 });
 
-// Check for registration event
-$('#personal-details').on('click', createProfile);
+// Add item button
+$("#add-item").on('click', function (event) {
+    event.preventDefault();
 
-function createProfile() {
-    // hide form section
-    $('#form').hide();
-    $('#wishlist-container').hide();
-    // show profile container
-    $("#profile-container").show();
+    var categoryInput = $('#category').val().trim();
+    var brand = $('#brand').val().trim();
+    var product = $('#product').val().trim();
 
-    // +Create and add id for profile functionality
-    $('#').on('click', function (event) {
-        event.preventDefault();   
-    })};
+    console.log(brand, product, categoryInput);
+
+    // add items to the wishlist
+    $("<li>").html(brand + ' ' + product).addClass("panel-block").appendTo("#items");
+
+});
+
+// Delete item button
+$("#delete").on('click', function (event) {
+    event.preventDefault();
+
+    $("<li>").html("");
+
+});
+
+    // Share wishlist email modal
+    $("#share-btn").click(function () {
+        $(".modal").addClass("is-active");
+    });
+
+    $(".modal-close").click(function () {
+        $(".modal").removeClass("is-active");
+    });
+
+});
