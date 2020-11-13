@@ -22,7 +22,7 @@ async function register(event)
     });
     if(response.ok)
     {
-        document.location.replace('/fullwishlist');
+        document.location.replace('/list');
     }
     else
     {
