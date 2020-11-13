@@ -18,7 +18,7 @@ async function loginFormHandler(event) {
         document.location.replace('/list');
       } else {
         console.log(response);
-        alert(response.statusText);
+        window.alert("Invalid Credentials");
       }
     }
   }
