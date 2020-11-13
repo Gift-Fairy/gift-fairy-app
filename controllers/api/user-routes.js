@@ -107,6 +107,7 @@ router.post('/login', (req, res) => {
   
       if (!validPassword) {
         res.status(400).json({ message: 'Invalid Credentials!' });
+        console.log('invalid password');
         return;
       }
   
@@ -117,7 +118,12 @@ router.post('/login', (req, res) => {
     
         res.json({ user: dbUserData, message: 'You are now logged in!' });
       });
-    });
+    })
+    .catch(err =>
+    {
+      res.status(500).json(err);
+      console.log(err);
+    })
   });
 
   router.post('/email', (req, res) =>
