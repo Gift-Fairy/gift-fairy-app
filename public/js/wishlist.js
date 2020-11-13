@@ -45,4 +45,13 @@ $("#delete").on('click', function (event) {
         $(".modal").removeClass("is-active");
     });
 
-});
+    // wishlist panel toggle
+    $(function(){
+        $('ul.li.tablinks:first').addClass('is-active');
+        $('li.tablinks').click(function() {
+            $('li.tablinks').removeClass('is-active');
+            $(this).addClass('is-active');
+            return true;
+        });
+        $('.tabcontent:first').show();
+    });
