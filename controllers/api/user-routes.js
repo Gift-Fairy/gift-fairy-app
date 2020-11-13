@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
+const nodemailer = require('nodemailer');
 const { User, Wishitem } = require('../../models');
 
 //get all users
@@ -117,6 +118,48 @@ router.post('/login', (req, res) => {
         res.json({ user: dbUserData, message: 'You are now logged in!' });
       });
     });
+  });
+
+  router.post('/email', (req, res) =>
+  {
+      console.log('email route');
+      let email = req.body.email;
+      let link = req.body.link;
+      let name = req.body.name;
+      let message = req.body.message;
+      console.log(email, link, name, message);
+  
+      let transporter = nodemailer.createTransport(
+      {
+          service: 'gmail',
+          auth:
+          {
+              user: 'giftfairy.nodemail@gmail.com',
+              pass: 'p2t4-giftfairy'
+          }
+      });
+  
+      let mail = 
+      {
+          from: 'giftfairy.nodemail@gmail.com',
+          to: email,
+          subject: `Gift Fairy: ${name} has shared their wishlist with you`,
+          text: `${link}\n${message}`
+      };
+  
+      transporter.sendMail(mail, (err, data) =>
+      {
+          if(err)
+          {
+              console.log('Error: ', err);
+              res.sendStatus(400).json();
+          }
+          else
+          {
+              console.log('Success');
+              res.send(200);
+          }
+      });
   });
 
 //log out route 

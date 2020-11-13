@@ -21,13 +21,11 @@ Wishitem.init(
     {
         type: DataTypes.INTEGER,
         allowNull: false,
-        
     },
     brand_name:
     {
         type: DataTypes.STRING,
         allowNull: false,
-    
     },
     category:
     {
