@@ -12,6 +12,21 @@ body .button.is-primary:hover {
   color: white;
 }
 
+/* Shopping image background with parallax */
+.parallax {
+  /* The image used */
+  background-image: url("/img/shopping-group.jpg");
+
+  /* Set a specific height */
+  min-height: 600px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #fs-frm input,
 #fs-frm select,
 #fs-frm fieldset,
