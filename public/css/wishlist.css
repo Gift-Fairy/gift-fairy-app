@@ -1,0 +1,37 @@
+.tab-pane {
+    display: none;
+}
+.tab-pane:target {
+    display: block;
+    max-height: 20em;
+    overflow: auto;
+}
+
+#paneltitle {
+  color:white;
+  background-color: #006a70;
+}
+
+#wishlist [type="submit"]:hover,
+#cat-btn:hover, 
+#share-btn:hover {
+  background-color: #68b0ac;
+  color: white;
+}
+
+#wishlist [type="submit"]:focus,
+#cat-btn:focus,
+#save-btn:focus,
+#share-btn:focus {
+  margin-bottom: 0;
+  background-color: #006a70;
+  color: white;
+}
+
+/* .tabcontent p {
+  display: none;
+}
+
+.tabcontent p.is-active {
+  display: block;
+} */
