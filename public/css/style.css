@@ -1,6 +1,7 @@
 body {
     background-color:rgba(104,176,172, 30%);
     margin:0 auto;
+    font-family: "Lato", sans-serif;
 }
 
 .navbar {
@@ -20,7 +21,7 @@ body {
 }
 
 /* login button */
-#login {
+#login, #account-login {
     color: #68b0ac;
 }
 
@@ -98,7 +99,7 @@ body {
 /* Parallax test but removed the html already, I left it in case it's an option for the profile section on homepage */
 .parallax {
     /* The image used */
-    background-image: url("/assets/img/logo-gf.png");
+    /* background-image: url("/assets/img/logo-gf.png"); */
   
     min-height: 100%; 
   

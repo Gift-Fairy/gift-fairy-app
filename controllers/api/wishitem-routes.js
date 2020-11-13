@@ -33,6 +33,27 @@ router.get('/:id', (req, res) =>
     });
 });
 
+router.post('/', (req, res) =>
+{
+    Wishitem.create(
+    {
+        category: req.body.category,
+        user_id: req.body.user_id,
+        brand_name: req.body.brand_name,
+        item_name: req.body.item_name
+    })
+    .then(dbItemData => 
+    {
+        res.json({'id': dbItemData['dataValues']['id']});
+        console.log(dbItemData['dataValues']['id']);
+    })
+    .catch(err =>
+    {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
 router.put('/:id', (req, res) =>
 {
     Wishitem.update(

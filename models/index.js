@@ -1,26 +1,15 @@
 const User = require('./User.js');
-const Wishlist = require('./Wishlist.js');
 const Wishitem = require('./Wishitem.js');
 
 // create associations
-User.hasMany(Wishlist,
+User.hasMany(Wishitem,
 {
-    foreignKey: 'userID'
+    foreignKey: 'user_id'
 });
 
-Wishlist.belongsTo(User,
+Wishitem.belongsTo(User,
 {
-    foreignKey: 'userID'
+    foreignKey: 'user_id'
 });
 
-Wishlist.hasMany(Wishitem,
-{
-    foreignKey: 'listID'
-});
-
-Wishitem.belongsTo(Wishlist,
-{
-    foreignKey: 'listID'
-});
-
-module.exports = { User, Wishlist, Wishitem };
+module.exports = { User, Wishitem };

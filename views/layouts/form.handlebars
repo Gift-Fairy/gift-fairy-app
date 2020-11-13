@@ -22,35 +22,39 @@
 
     {{>loginheader}}
 
-    <div class="container">
-        {{{body}}}
-    </div>
+    {{!-- <style>
+        .parallax {
+          /* The image used */
+          background-image: url("/img/shopping-group.jpg");
+    
+          /* Set a specific height */
+          min-height: 600px;
+    
+          /* Create the parallax scrolling effect */
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
 
-    <!-- input form for the individual -->
-    {{>register}}
+      </style> --}}
 
-    <!-- profiles section -->
-    {{!-- <section id="profile-container"> --}}
-    <div class="column is-fullwidth pt-6 is-centered">
+    <div class="parallax">
 
-    <!-- ## handlebar for profiles carousel-->
-    {{>profiles}}
-
-    </div>
-    {{!-- </section> --}}
-
-    <!-- wishlist section -->
-    <section class="container">
-        <div class="column is-fullwidth pt-6 is-centered">
-
-    <!-- input form for the individual preferences -->
-    {{>details}}
-
-    <!-- wishlist input section and current wishlist -->
-    {{>wishlist}}
-
+        <div class="container">
+            {{{body}}}
         </div>
-    </section>
+
+        <section>
+            <div>
+
+                <!-- register form for the individual -->
+                {{>register}}
+
+            </div>
+        </section>
+
+    </div>
 
     <!-- bulma calendar ext in case we need it -> 'https://creativebulma.net/product/calendar/demo' -->
     <script src="~bulma-calendar/dist/js/bulma-calendar.min.js"></script>
@@ -59,6 +63,9 @@
     <script type="text/javascript"
         src="/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+    <script src="/js/register.js"></script>
+        <script src="/js/login.js"></script>
+
 </body>
 
 </html>

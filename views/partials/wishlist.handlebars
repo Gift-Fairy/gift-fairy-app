@@ -1,99 +1,214 @@
-    <!-- in case we have another section to add -->
-    <section id="wishlist-container" class="is-desktop">
-        <div class="column is-fullwidth pt-6 is-centered">
-            <div class="columns is-centered">
-                <div class="column title has-text-centered is-10">
-                    <p><strong>MAKE YOUR WISHLIST</strong></p>
+        <!-- detailed wishlist -->
+        <section class="container" id="wishlist">
+            <div class="column is-fullwidth pt-6 is-centered">
+                <div class="columns is-centered">
+                    <div class="column title has-text-centered is-10">
+                        <p><strong>MAKE YOUR WISHLIST</strong></p>
+                    </div>
                 </div>
-            </div>
-            <!-- input wishlist items form -->
-            <div class="columns is-10">
-                <div class="column mx-6">
-                    <form action="https://formspree.io/f/xgepzwkk" method="POST">
-                        <div class="field">
-                            <label for="" class="label">Category:</label>
-                            <div class="field has-addons">
-                                <div class="control is-expanded">
-                                    <div class="select is-fullwidth">
-                                        <select name="wishlist item">
-                                            <option value="Accessories">Accessories</option>
-                                            <option value="Apparel">Apparel</option>
-                                            <option value="Electronics">Electronics</option>
-                                            <option value="Cooking Tools">Cooking Tools</option>
-                                        </select>
+                <!-- input wishlist items form -->
+                <div class="columns is-10">
+                    <div class="column mx-6">
+                        <form>
+                            <div class="field">
+                                <label for="" class="label">Category:</label>
+                                <div class="field has-addons">
+                                    <div class="control is-expanded">
+                                        <div class="select is-fullwidth is-hoverable" required="">
+                                            <select name="wishlist item" id="category">
+                                                <option value="">-</option>
+                                                <option value="Cooking Tools">Cooking</option>
+                                                <option value="Electronics">Electronics</option>
+                                                <option value="Computers">Computers</option>
+                                                <option value="Clothing">Clothing</option>
+                                                <option value="Shoes">Shoes</option>
+                                                <option value="Accessories">Accessories</option>
+                                                <option value="Home">Home</option>
+                                                <option value="Appliances">Appliances</option>
+                                                <option value="Garden">Garden</option>
+                                                <option value="Movies">Movies</option>
+                                                <option value="Music">Music</option>
+                                                <option value="Books">Books</option>
+                                                <option value="Toys & Games">Toys & Games</option>
+                                                <option value="Food">Food</option>
+                                                <option value="Pets">Pets</option>
+                                                <option value="Beauty">Beauty</option>
+                                                <option value="Sports">Sports</option>
+                                                <option value="Fitness">Fitness</option>
+                                                <option value="Auto">Auto</option>
+                                                <option value="Photo">Photo</option>
+                                                <option value="Art">Art</option>
+                                                <option value="Craft">Craft</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="control">
-                                    <button type="submit" class="button is-primary">Choose</button>
+                            </div>
+                            <div class="field">
+                                <label for="" class="label">Brand:</label>
+                                <input type="text" placeholder="" class="input" id="brand" required="">
+                            </div>
+                            <div class="field">
+                                <label for="" class="label">Item name:</label>
+                                <input type="text" placeholder="" class="input" id="product" required="">
+                            </div>
+                            <div class="pb-5 has-text-centered">
+                                <input type="submit" class="button is-primary" value="Add Item" id="add-item">
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- panel for saved wishlist items -->
+                    <div class="column" id="panel">
+                        <article class="panel is-desktop is-white">
+                            <p class="panel-heading">
+                                Your Wishlist!
+                            </p>
+
+                            <nav class="tabs is-boxed is-toggle is-centered">
+                                <div class="container">
+                                    <ul class="" id="wishlist-panel">
+                                        <li class="tab is-active" id="catorigin" onclick="openTab(event,'content1')">
+                                            <a>All</a></li>
+                                        <li class="tab" id="origin0" onclick="openTab(event,'content2')">
+                                            <a id="catorigin0">Electronics</a></li>
+                                        <li class="tab" id="origin1" onclick="openTab(event,'content3')">
+                                            <a id="catorigin1">Fashion</a></li>
+                                        <li class="tab" id="origin2" onclick="openTab(event,'content4')">
+                                            <a id="catorigin2">Home & Garden</a></li>
+                                        <li class="tab" id="origin2" onclick="openTab(event,'content4')">
+                                            <a id="catorigin2">Pets</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+
+                            <div class="panel-block">
+                                <p class="control has-icons-left">
+                                    <input class="input is-primary" type="text" placeholder="Search">
+                                    <span class="icon is-left">
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="container is-6">
+                                <div class="container is-active" id="items">
+                                    <ul id="content1" class="tabcontent">
+                                        <li class="panel-block" id="item0">
+                                            <button class="delete"></button>
+                                            Dell Latitude 14"
+                                        </li>
+                                        <li class="panel-block">
+                                            <button class="delete"></button>
+                                            Creuset dutch oven
+                                        </li>
+                                        <li class="panel-block">
+                                            <button class="delete"></button>
+                                            Apple iPhone 12
+                                        </li>
+                                        <a class="panel-block">
+                                            <button class="delete"></button>
+                                            Converse sneakers
+                                        </a>
+                                        <a class="panel-block">
+                                            <button class="delete"></button>
+                                            Converse sneakers
+                                        </a>
+                                        <a class="panel-block">
+                                            <button class="delete"></button>
+                                            Converse sneakers
+                                        </a>
+                                        <a class="panel-block" id="sampleitem">
+                                        </a>
+                                    </ul>
+                                </div>
+
+                                <div id="content2" class="tabcontent" style="display:none">
+                                    <div class="title">Test Panel 1
+                                        <a class="panel-block">
+                                            <span class="panel-icon"></span>
+                                            Dell Latitude 14"
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div id="content2" class="tabcontent" style="display:none">
+                                    <div class="title">Test Panel Test</div>
+                                    <a class="panel-block">
+                                        <span class="panel-icon"></span>
+                                        Dell Latitude 14"
+                                    </a>
+                                </div>
+
+                                <div id="content2" class="tabcontent" style="display:none">
+                                    <div class="title">Panel Panel Panel Test</div>
+                                    <a class="panel-block">
+                                        <span class="panel-icon"></span>
+                                        Dell Latitude 14"
+                                    </a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="field">
-                            <label for="" class="label">Preferred brand:</label>
-                            <input type="text" placeholder="" class="input" required="">
-                        </div>
-                        <div class="field">
-                            <label for="" class="label">Item name:</label>
-                            <input type="text" placeholder="" class="input" required="">
-                        </div>
-                        <div class="field">
-                            <label for="" class="label">Comments:</label>
-                            <input type="message" placeholder="Describe the exact item further" class="input"
-                                required="">
-                        </div>
-                        <div class="pb-5 has-text-centered is-medium">
-                            <input type="submit" value="Add Item" id="register">
-                        </div>
-                    </form>
-                </div>
-
-                <!-- panel for saved wishlist items -->
-                <div class="column">
-                    <article class="panel is-desktop">
-                        <p class="panel-heading">
-                            Your Wishlist!
-                        </p>
-                        <p class="panel-tabs">
-                            <a class="is-active">All</a>
-                            <a>Fashion</a>
-                            <a>Electronics</a>
-                            <a>Cooking</a>
-                            <a>Home</a>
-                        </p>
-                        <div class="panel-block">
-                            <p class="control has-icons-left">
-                                <input class="input is-primary" type="text" placeholder="Search">
-                                <span class="icon is-left">
-                                    <i class="fas fa-search" aria-hidden="true"></i>
-                                </span>
-                            </p>
-                        </div>
-                        <a class="panel-block">
-                            <span class="panel-icon">
-                                <i class="fas fa-check-circle"></i>
-                            </span>
-                            Dell Latitude 14"
-                        </a>
-                        <a class="panel-block">
-                            <span class="panel-icon">
-                                <i class="far fa-check-circle"></i>
-                            </span>
-                            Creuset dutch oven
-                        </a>
-                        <a class="panel-block">
-                            <span class="panel-icon">
-                                <i class="fas fa-check-circle"></i>
-                            </span>
-                            Apple iPhone 12
-                        </a>
-                        <a class="panel-block">
-                            <span class="panel-icon">
-                                <i class="far fa-check-circle"></i>
-                            </span>
-                            Converse sneakers
-                        </a>
-                    </article>
+                        </article>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+
+            <hr>
+
+            <!-- wishlist buttons -->
+            <div class="container py-5 box" id="wishlist-btns">
+                <div class="is-horizontal">
+                    <div class="columns is-6">
+                        <!-- wishlist complete button -->
+                        <div class="column">
+                            <div class="has-text-centered">
+                                <input type="submit" class="button is-primary" value="Done" id="save-btn">
+                            </div>
+                        </div>
+                        <!-- modal to share wishlist via email or download -->
+                        <div class="column" id="email">
+                            <div class="has-text-centered">
+                                <div id="modal" class="modal">
+                                    <div class="modal-background"></div>
+                                    <div class="modal-content">
+                                        <div class="box">                                                            
+                                            <div class="columns is-6">
+                                                <div class="column is-6">
+                                                    <article class="media">
+                                                        <div class="title has-text-centered">
+                                                            <p>Hey "First Name", let's share your list!</p>
+                                                        </div>
+                                                    </article>
+                                                    <div class="column">
+                                                        <label class="label">Message</label>
+                                                          <textarea id="message" class="textarea" placeholder="Textarea"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="media-content">
+                                                    <div class="content">
+                                                            {{!-- <div class="column is-3">
+                                                                <label class="label">Friend's Name</label>
+                                                                    <input class="is-active" type="name" placeholder="" value="Jane">
+                                                            </div> --}}
+                                                            <div class="column is-3">
+                                                                <label class="label">Email</label>
+                                                                    <input class="is-active" id="email-input" type="email" placeholder="Email input" value="jane@gmail.com">
+                                                            </div>
+                                                            <div class="column is-2 has-text-centered">
+                                                                <div class="control">
+                                                                    <button class="button is-primary" id="send-email">Send Email</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                    <button class="modal-close is-large" aria-label="close"></button>
+                                </div>
+                                <button class="button is-primary" id="share-btn">Share Wishlist</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>

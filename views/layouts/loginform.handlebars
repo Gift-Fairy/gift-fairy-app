@@ -2,41 +2,44 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gift Fairy</title>
-    <!-- css stylesheets -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
-    <link rel="stylesheet" href="/css/form.css" />
-    <link rel="stylesheet" href="/css/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gift Fairy</title>
+  <!-- css stylesheets -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+  <link rel="stylesheet" href="/css//form.css" />
+  <link href="~bulma-calendar/dist/css/bulma-calendar.min.css" rel="stylesheet">
 
-    <!-- scripts -->
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script defer src="/js/scripts.js"></script>
+  <!-- scripts -->
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script defer src="/form copy.js"></script>
 
 </head>
 
 <body>
 
-    {{>loginheader}}
+  {{>loginheader}}
+
+  <div class="parallax">
 
     <div class="container">
-        {{{body}}}
+      {{{body}}}
     </div>
 
     <!-- input form for the individual -->
     {{>login}}
 
+  </div>
 
-    <!-- bulma calendar ext in case we need it -> 'https://creativebulma.net/product/calendar/demo' -->
-    <script src="~bulma-calendar/dist/js/bulma-calendar.min.js"></script>
-    <script src="/js/form.js"></script>
-    <!-- bulma carousel -->
-    <script type="text/javascript"
-        src="/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+  <!-- bulma calendar ext in case we need it -> 'https://creativebulma.net/product/calendar/demo' -->
+  <script src="~bulma-calendar/dist/js/bulma-calendar.min.js"></script>
+  <script src="/js/form.js"></script>
+  <!-- bulma carousel -->
+  <script type="text/javascript"
+    src="/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+  <script src="/js/login.js"></script>
 </body>
 
 </html>

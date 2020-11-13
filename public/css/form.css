@@ -1,12 +1,39 @@
 body {
   background-color:rgba(104,176,172, 30%);
+  font-family: "Lato", sans-serif;
+}
+
+body .button.is-primary {
+    background-color: #ff7e67e6;
+}
+
+body .button.is-primary:hover {
+  background-color: #68b0ac;
+  color: white;
+}
+
+hr {
+  margin-bottom: 0;
+}
+
+/* Shopping image background with parallax */
+.parallax {
+  /* The image used */
+  background-image: url("/img/shopping-group.jpg");
+
+  /* Set a specific height */
+  min-height: 600px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #fs-frm input,
 #fs-frm select,
-#fs-frm textarea,
 #fs-frm fieldset,
-#fs-frm optgroup,
 #fs-frm label,
 #fs-frm #card-element:disabled {
   font-family: inherit;
@@ -44,7 +71,7 @@ body {
 }
 #fs-frm input:focus,
 #fs-frm select:focus,
-#fs-frm textarea:focus {
+#fs-frm textarea:focus, {
   background-color: white;
   outline-style: solid;
   outline-width: thin;
@@ -73,12 +100,31 @@ body {
   background-color: white;
 }
 
-#fs-frm [type="submit"]:hover {
+#wishlist [type="submit"],
+#register [type="submit"],
+#cat-btn,
+#save-btn,
+#share-btn {
+  background-color: #ff7e67e6;
+}
+
+#fs-frm [type="submit"]:hover, 
+#choose-category [type="submit"]:hover,
+#wishlist [type="submit"]:hover,
+#form [type="submit"]:hover,
+#cat-btn:hover, 
+#share-btn:hover {
   background-color: #68b0ac;
   color: white;
 }
 
-#fs-frm [type="submit"]:focus {
+#fs-frm [type="submit"]:focus, 
+#choose-category [type="submit"]:focus,
+#wishlist [type="submit"]:focus,
+#form [type="submit"]:focus,
+#cat-btn:focus,
+#save-btn:focus,
+#share-btn:focus {
   margin-bottom: 0;
   background-color: #006a70;
   color: white;
@@ -86,4 +132,12 @@ body {
 
 #fs-frm select {
   text-transform: none;
+}
+
+.tabcontent p {
+  display: none;
+}
+
+.tabcontent p.is-active {
+  display: block;
 }
