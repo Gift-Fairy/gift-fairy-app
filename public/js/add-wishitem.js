@@ -3,10 +3,9 @@ async function addWishItem(event)
 {
     event.preventDefault();
 
-    let category = 'shoe';
-    let item_name = 'shoes';
-    let brand_name = 'addidas';
-    let user_id = 1;
+    let category = document.querySelector('#category').value;
+    let item_name = document.querySelector('#product').value;
+    let brand_name = document.querySelector('#brand').value;
     let user_id_response = await fetch('/api/users/login',
     {
         method: 'GET',
@@ -15,8 +14,8 @@ async function addWishItem(event)
             'Content-Type': 'application/json'
         }
     });
-    const data = await user_id_response.json().id;
-    console.log(data);
+    const data = await user_id_response.json();
+    let user_id = data.id;
     const response = await fetch('/api/items',
     {
         method: 'POST',
