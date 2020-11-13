@@ -1,6 +1,7 @@
 body {
     background-color:rgba(104,176,172, 30%);
     margin:0 auto;
+    font-family: "Lato", sans-serif;
 }
 
 .navbar {
