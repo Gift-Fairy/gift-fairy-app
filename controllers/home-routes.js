@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Wishitem } = require('../models');
 
 // const sequelize = require('../config/connection.js');
 
@@ -21,7 +21,41 @@ router.get('/login', (req, res) =>
 
 router.get('/list', (req, res) =>
 {
-    res.render('main', {layout: 'fullwishlist'});
+    User.findOne(
+    {
+        where:
+        {
+            id: req.session.user_id
+        },
+        includes:
+        [
+            {
+                model: Wishitem,
+                attributes:['id', 'brand_name', 'item_name']
+            }
+        ]
+    })
+    .then(dbUserData =>
+    {
+        if (!dbUserData) 
+        {
+            res.status(404).json({ message: 'No user found with this id' });
+            return;
+        }
+
+        // serialize the data
+        const data = dbUserData.get({ plain: true });
+        console.log(data);
+
+        // pass data to template
+        res.render('main', {layout: 'fullwishlist',  data});
+    })
+    .catch(err =>
+    {
+        console.log(err);
+        res.status(500).json(err);
+    })
+    res.render('main', {layout: 'fullwishlist', });
 });
 
 // router.get('/list/:id', (req, res) =>

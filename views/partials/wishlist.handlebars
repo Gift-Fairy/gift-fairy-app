@@ -136,8 +136,8 @@
                                         <input list="wish_search" onkeydown="" class="input" type="text"
                                             placeholder="Search for wish items.." name="input" id="input0">
                                         <datalist id="wish_search">
-                                            {{#each brand_name && item_name}}
-                                            <option value="{{{brand_name && item_name}}}">{{{brand_name && item_name}}}
+                                            {{#each data.wishitems}}
+                                            <option value="{{{this.brand_name}}} {{{this.item_name}}}">{{{this.brand_name}}} {{{this.item_name}}}
                                             </option>
                                             {{/each}}
 
@@ -182,7 +182,7 @@
                                             <div class="column is-6">
                                                 <article class="media">
                                                     <div class="title has-text-centered">
-                                                        <p>Hey {{full_name}}, let's share your list!</p>
+                                                        <p>Hey {{data.full_name}}, let's share your list!</p>
                                                     </div>
                                                 </article>
                                                 <div class="column">
