@@ -99,7 +99,7 @@ body {
 /* Parallax test but removed the html already, I left it in case it's an option for the profile section on homepage */
 .parallax {
     /* The image used */
-    background-image: url("/assets/img/logo-gf.png");
+    /* background-image: url("/assets/img/logo-gf.png"); */
   
     min-height: 100%; 
   
