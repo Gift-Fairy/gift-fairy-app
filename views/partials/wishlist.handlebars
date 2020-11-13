@@ -130,16 +130,21 @@
                         <li id="search" class="tab-pane animated">
                             <form class="form" id="form" autocomplete="on">
                                 <div class="field">
-                                    <label class="label">See if an item is already added or items for a brand are in
+                                    <label class="label">See if an item is already added in
                                         this list</label>
                                     <div class="control">
                                         <input list="wish_search" onkeydown="" class="input" type="text"
                                             placeholder="Search for wish items.." name="input" id="input0">
                                         <datalist id="wish_search">
-                                            {{#each brand_name && item_name}}
-                                            <option value="{{{brand_name && item_name}}}">{{{brand_name && item_name}}}
+                                            {{#each item_name}}
+                                            <option value="{{{item_name}}}">{{{item_name}}}
                                             </option>
                                             {{/each}}
+                                            
+                                             {{!-- {{#each brand_name && item_name}}
+                                            <option value="{{{brand_name && item_name}}}">{{{brand_name && item_name}}}
+                                            </option>
+                                            {{/each}} --}}
 
                                             {{!-- Filler code for Demo --}}
                                             <option value="Dell-Latitude 14">Dell-Latitude 14"</option>
