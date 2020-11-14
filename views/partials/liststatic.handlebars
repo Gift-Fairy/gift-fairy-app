@@ -3,45 +3,43 @@
     <div class="column is-fullwidth pt-6 is-centered">
         <div class="columns is-centered">
             <div class="column title has-text-centered is-10">
-                <p><strong>{{data.full_name}}'S WISHLIST</strong></p>
+                <p><strong>{{data.full_name}}'s Wish List</strong></p>
             </div>
         </div>
 
         <!-- shoe size, shirt size, brands, colors  -->
         <div class="container" id="userdetails">
-            <div class="title has-text-centered"><strong>Make it easier for your friends and family to get you
+            {{!-- <div class="title has-text-centered"><strong>Make it easier for your friends and family to get you
                     gifts:</strong>
+            </div> --}}
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">Shoe Size</label>
+                </div>
+                <div class="field-body is-2">
+                    <p>8.5</p>
+                    <div class="field-label is-normal">
+                        <label class="label">Shirt Size:</label>
+                    </div>
+                    <p>Medium</p>
+                </div>
             </div>
-                <div class="field is-horizontal">
-                    <div class="field-label is-normal">
-                        <label class="label">Shoe Size</label>
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">Favorite Colors:</label>
+                </div>
+                <div class="field-body is-3">
+                    <div class="field">
+                        <p>Purple, Pink, Navy Blue</p>
                     </div>
-                    <div class="field-body is-2">
-                        <p>8.5</p>
-                        <div class="field-label is-normal">
-                            <label class="label">Shirt Size:</label>
-                        </div>
-                        <p>Medium</p>
+                    <div class="field-label is-normal">
+                        <label class="label">Favorite Brands:</label>
+                    </div>
+                    <div class="field">
+                        <p>Zara, Under Armour, Bath & Body Works</p>
                     </div>
                 </div>
-                <div class="field is-horizontal">
-                    <div class="field-label is-normal">
-                        <label class="label">Favorite Colors:</label>
-                    </div>
-                    <div class="field-body is-3">
-                        <div class="field">
-                            <p>Purple, Pink, Navy Blue</p>
-                        </div>
-                        <div class="field-label is-normal">
-                            <label class="label">Favorite Brands:</label>
-                        </div>
-                        <p>
-                        <div class="field">
-                            <p>Zara, Under Armour, Bath & Body Works</p>
-                        </div>
-                        </p>
-                    </div>
-                </div>
+            </div>
         </div>
 
 
@@ -65,8 +63,7 @@
                 <ul class="container is-6">
                     <il class="tab-pane animated" id="all" name="all">
                         {{#each data.wishitems}}
-                        <p>{{this.brand_name}} {{this.item_name}}<button class="delete is-pulled-left"
-                                id="wishitem-{{this.id}}"></button></p>
+                        <p>{{this.brand_name}} {{this.item_name}}</p>
                         {{/each}}
                     </il>
 
@@ -136,7 +133,7 @@
         </div>
     </div>
 
-    <hr>
+    {{!-- <hr> --}}
 
 
     <!-- share this wishlist button -->
@@ -184,7 +181,7 @@
                 </div>
                 <button class="modal-close is-large" aria-label="close"></button>
             </div>
-            <button class="button is-primary" id="share-btn">Share Wishlist</button>
+            {{!-- <button class="button is-primary" id="share-btn">Share Wishlist</button> --}}
         </div>
     </div>
     </div>
