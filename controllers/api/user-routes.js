@@ -1,7 +1,8 @@
 const router = require('express').Router();
-const sequelize = require('../../config/connection');
 const nodemailer = require('nodemailer');
 const { User, Wishitem } = require('../../models');
+
+require('dotenv').config();
 
 //get all users
 router.get('/', (req, res) => 
@@ -140,8 +141,8 @@ router.post('/login', (req, res) => {
           service: 'gmail',
           auth:
           {
-              user: 'giftfairy.nodemail@gmail.com',
-              pass: 'p2t4-giftfairy'
+              user: process.env.DB_EMAIL,
+              pass: process.env.DB_EMAIL_PW
           }
       });
   
