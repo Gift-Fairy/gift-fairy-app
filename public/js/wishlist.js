@@ -16,7 +16,7 @@ $("#add-item").on('click', function (event) {
   $('#brand').val('');
   $('#product').val('');
 
-  console.log(brand, product, categoryId);
+  console.log(brand, product);
 
   // add items to the wishlist
   $("<p>").html(brand + ' ' + product + '<button class="delete is-pulled-left"></button>').appendTo("#all");

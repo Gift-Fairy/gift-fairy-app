@@ -20,7 +20,6 @@ async function addWishItem(event)
         method: 'POST',
         body: JSON.stringify(
         {
-            category,
             item_name,
             brand_name,
             user_id
