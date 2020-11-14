@@ -28,17 +28,17 @@ $("#share-btn").click(function () {
   $(".modal").addClass("is-active");
 });
 
-$(".modal-close").click(function () {
+$(".modal-close, #send-email").click(function () {
   $(".modal").removeClass("is-active");
 });
 
 // wishlist panel toggle
-$(function () {
-  $('ul.li.tablinks:first').addClass('is-active');
-  $('li.tablinks').click(function () {
-    $('li.tablinks').removeClass('is-active');
-    $(this).addClass('is-active');
-    return true;
-  });
-  $('.tabcontent:first').show();
-});  
+// $(function () {
+//   $('ul.li.tablinks:first').addClass('is-active');
+//   $('li.tablinks').click(function () {
+//     $('li.tablinks').removeClass('is-active');
+//     $(this).addClass('is-active');
+//     return true;
+//   });
+//   $('.tabcontent:first').show();
+// });  

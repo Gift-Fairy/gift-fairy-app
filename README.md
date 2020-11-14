@@ -15,15 +15,16 @@ WHEN I revisit the site at a later time and choose to sign in<br />
 THEN I am prompted to enter Email and Password<br />
 WHEN I am signed in, I can view my wish list and add or remove items
 
-
-## Installation
-No installation is necessary. The application is a website.
-
-## Usage
-To use the application, simply go to the website.
+## Features
+* Users have the ability to create an account and login with it.
+* The account keeps track of their wishlist.
+* Users are only able to edit their individual wishlist.
+* Users can share the wishlist with a friend or family member via a permalink through the email feature.
+* Users can add and remove items from their wishlist.
+* Users can add preferences that act as a quick guide for looking for gift ideas.
 
 ## Screenshot
-<img src="/assets/gift-fairy-screenshot.png" style="max-width:100%;">
+<img src="./assets/gift-fairy-screenshot.png" style="max-width:100%;">
 
 ## Deployed Link via Heroku
 <a href="https://polar-cove-94723.herokuapp.com/" target="_blank">https://polar-cove-94723.herokuapp.com/</a>
@@ -32,6 +33,7 @@ To use the application, simply go to the website.
 ## Potential Future Upgrades
 * Share your wishlist via social media.
 * Search the items in your wish list.
-* Voice AI (2025)
-* Autocomplete
 * Allow members to make comments and suggestions on wish lists that cannot be viewed by owner.
+* Allow members multiple list for different occasions.
+* Allow members to organize their list items by categories.
+* Allow access to only members among a friend list or specific shares.

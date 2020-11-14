@@ -56,6 +56,7 @@ router.get('/list', (req, res) =>
 
         // serialize the data
         const data = dbUserData.get({ plain: true });
+        console.log(data);
 
         // pass data to template
         res.render('main', {layout: 'fullwishlist', data});
