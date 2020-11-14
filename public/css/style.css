@@ -1,7 +1,11 @@
 body {
-    background-color:rgba(104,176,172, 30%);
+    background-color:#68b0ac4d;
     margin:0 auto;
     font-family: "Lato", sans-serif;
+}
+
+.input {
+    color: white;
 }
 
 .navbar {
@@ -84,16 +88,19 @@ body {
 
 .is-horizontal-center {
     justify-content: center;
-  }
+}
+
 .card {
     background-color: transparent;
     box-shadow: none;
     text-align: center;
 }
+
 .footer {
     padding:2rem 1.5rem 2rem;
-    background-color: transparent;
+    background-color: #68b0ac4d;
     /* border-top: 1px solid #006a71; */
+    color: darkslategrey;    
 }
 
 /* Parallax test but removed the html already, I left it in case it's an option for the profile section on homepage */
