@@ -28,7 +28,8 @@ async function register(event)
     }
     else
     {
-        console.log('Error', response);
+        jsonResponse = await response.json();
+        console.log('Error', jsonResponse);
     }
 }
 
