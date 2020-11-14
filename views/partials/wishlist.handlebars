@@ -78,9 +78,9 @@
                 <div class="tab content" id="items">
                     <ul class="container is-6">
                         <il class="tab-pane animated" id="all" name="all">
-                            <p>LG Monitor<button class="delete is-pulled-left"></button></p>
-                            <p>Converse high-top<button class="delete is-pulled-left"></button></p>
-                            <p>Apple iPhone 12<button class="delete is-pulled-left"></button></p>
+                            {{#each data.wishitems}}
+                            <p>{{this.brand_name}} {{this.item_name}}<button class="delete is-pulled-left" id="wishitem-{{this.id}}"></button></p>
+                            {{/each}}
                         </il>
 
 
