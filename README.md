@@ -15,9 +15,11 @@
 ## Usage
 
 ## Screenshot
+<img src="/assets/gift-fairy-screenshot.png" style="max-width:100%;">
+
 
 ## Deployed Link via Heroku
-Link here
+<a href="https://polar-cove-94723.herokuapp.com/" target="_blank">https://polar-cove-94723.herokuapp.com/</a>
 
 ## Contributing
 
