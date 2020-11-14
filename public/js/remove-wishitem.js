@@ -1,11 +1,24 @@
 // async function deleteWishItem(event) 
 // {
 //     event.preventDefault();
+async function terminate()
+{
   
+}
+
     $(document).ready(function(){
   
       $('#fashion, #electronics, #home, #all, #pets').on('click', '.delete', function() {
         $(this).parent('p').remove();
+        let id = $(this).attr('id').replace('wishitem-', '');
+        const response = fetch(`/api/items/${id}`,
+        {
+          method: 'DELETE',
+          headers:
+          {
+            'Content-Type': 'application/json'
+          }
+        });
       });
     
     });

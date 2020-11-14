@@ -14,6 +14,9 @@ $("#add-item").on('click', function (event) {
   var brand = $('#brand').val().trim();
   var product = $('#product').val().trim();
 
+  $('#brand').val('');
+  $('#product').val('');
+
   console.log(brand, product, categoryId);
 
   // add items to the wishlist
