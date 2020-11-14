@@ -37,7 +37,6 @@ router.post('/', (req, res) =>
 {
     Wishitem.create(
     {
-        category: req.body.category,
         user_id: req.body.user_id,
         brand_name: req.body.brand_name,
         item_name: req.body.item_name

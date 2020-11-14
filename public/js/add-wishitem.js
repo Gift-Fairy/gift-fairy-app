@@ -3,7 +3,6 @@ async function addWishItem(event)
 {
     event.preventDefault();
 
-    let category = document.querySelector('#category').value.trim();
     let item_name = document.querySelector('#product').value.trim();
     let brand_name = document.querySelector('#brand').value.trim();
     let user_id_response = await fetch('/api/users/login',
