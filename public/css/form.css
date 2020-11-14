@@ -3,11 +3,11 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-body .button.is-primary {
+body .button {
     background-color: #ff7e67e6;
 }
 
-body .button.is-primary:hover {
+body .button:hover {
   background-color: #68b0ac;
   color: white;
 }
