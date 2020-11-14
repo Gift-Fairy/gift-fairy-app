@@ -5,18 +5,31 @@ const { User, Wishitem } = require('../models');
 
 router.get('/', (req, res) =>
 {
-    console.log(req.session.id);
     res.render('main', {layout: "index", loggedin: req.session.loggedin});
 });
 
 router.get('/register', (req, res) =>
 {
-    res.render('main', {layout: "form", loggedin: req.session.loggedin});
+    if(req.session.loggedin)
+    {
+        res.render('main', {layout: 'index', loggedin: req.session.loggedin});
+    }
+    else
+    {
+        res.render('main', {layout: "form", loggedin: req.session.loggedin});
+    }
 });
 
 router.get('/login', (req, res) =>
 {
-    res.render('main', {layout: 'loginform', loggedin: req.session.loggedin});
+    if(req.session.loggedin)
+    {
+        res.render('main', {layout: 'index', loggedin: req.session.loggedin});
+    }
+    else
+    {
+        res.render('main', {layout: 'loginform', loggedin: req.session.loggedin});
+    }
 });
 
 router.get('/list', (req, res) =>

@@ -79,7 +79,7 @@ router.post('/', (req, res) => {
     req.session.save(() => 
     {
       req.session.user_id = dbUserData.id;
-      req.session.loggedIn = true;
+      req.session.loggedin = true;
       res.json(dbUserData.jsonBody);
     });
   })
@@ -114,7 +114,7 @@ router.post('/login', (req, res) => {
       req.session.save(() => {
         req.session.user_id = dbUserData.id;
         req.session.email = dbUserData.email;
-        req.session.loggedIn = true;
+        req.session.loggedin = true;
     
         res.json({ user: dbUserData, message: 'You are now logged in!' });
       });
@@ -170,7 +170,7 @@ router.post('/login', (req, res) => {
 
 //log out route 
   router.post('/logout', (req, res) => {
-    if (req.session.loggedIn) {
+    if (req.session.loggedin) {
       req.session.destroy(() => {
         res.status(204).end();
       });
