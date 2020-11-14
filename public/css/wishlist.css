@@ -29,3 +29,12 @@
   background-color: #006a70;
   color: white;
 }
+
+#shoe-size,
+#shirt-size,
+#favorite-color,
+#favorite-brand,
+#brand,
+#product {
+  color: black;
+}
