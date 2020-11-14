@@ -3,15 +3,6 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-body .button {
-    background-color: #ff7e67e6;
-}
-
-body .button:hover {
-  background-color: #68b0ac;
-  color: white;
-}
-
 hr {
   margin-bottom: 0;
 }
@@ -100,39 +91,18 @@ hr {
   background-color: white;
 }
 
-#wishlist [type="submit"],
-#register [type="submit"],
-#cat-btn,
-#save-btn,
-#share-btn,
-#register,
-#account-login,
-#logout,
-#send-email {
-  background-color: #ff7e67e6;
-  color: white;
-}
-
 #fs-frm [type="submit"]:hover, 
 #form [type="submit"]:hover,
-#register:hover,
-#save-btn:hover,
-#share-btn:hover,
-#account-login:hover,
-#logout:hover,
-#send-email:hover {
+#logout:hover
+ {
   background-color: #68b0ac;
   color: white;
 }
 
 #fs-frm [type="submit"]:focus, 
 #form [type="submit"]:focus,
-#register:focus,
-#save-btn:focus,
-#share-btn:focus,
-#account-login:focus,
 #logout:focus
-#send-email:focus {
+ {
   margin-bottom: 0;
   background-color: #006a70;
   color: white;
@@ -141,3 +111,4 @@ hr {
 #fs-frm select {
   text-transform: none;
 }
+_______________

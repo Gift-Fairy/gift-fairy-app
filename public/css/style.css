@@ -1,138 +1,97 @@
+
 body {
     background-color:#68b0ac4d;
     margin:0 auto;
     font-family: "Lato", sans-serif;
-}
-
-.input {
-    color: white;
-}
-
-#profile,
-#login,
-#account-login,
-#register,
-#logout {
-  color: white;
-}
-
-#register,
-#account-login,
-#logout {
-  background-color: #ff7e67e6;
-}
-
-#register,
-#account-login,
-#logout {
-  background-color: #ff7e67e6;
-  color: white;
-}
-
-#register:hover,
-#account-login:hover,
-#logout:hover {
-background-color: #68b0ac;
-color: white;
-}
-
-.navbar {
+  }
+  
+  .navbar {
    /* background-color:rgba(235,244,243, 90%); */
    padding: .3em;
    height: 75%;
-}
-
-.navbar-menu {
+  }
+  
+  .navbar-menu {
     background-color: transparent;
     box-shadow: none;
-}
-
-/* create profile button */
-#profile {
-    background-color:rgba(255,126,103, 90%);
-}
-
-/* login button */
-#login, #account-login {
-    color: #68b0ac;
-}
-
-.hero {
+  }
+  
+  .hero {
    color: #ffffff;
    font-family: sans-serif;
    vertical-align: middle;
    /* background-color:rgba(255,255,255, 50%); */
-}
-
-#process-container, .p {
+  }
+  
+  #process-container, .p {
     display: flex;
     align-items: center;
     text-align: center;
     border-color: black;
     color: #ff7e67;
-}
-
-#process-container p:hover {
+  }
+  
+  #process-container p:hover {
     color: #68b0ab;
-}
-
-.notification a:not(.button):not(.dropdown-item) { 
+  }
+  
+  .notification a:not(.button):not(.dropdown-item) { 
     text-decoration: none;
     color: #ff7e67;
-}
-
-.tile-shadow {
+  }
+  
+  .tile-shadow {
   transition: box-shadow .3s;
-}
-
-.tile-shadow:hover {
+  }
+  
+  .tile-shadow:hover {
   box-shadow: 0 0 10px rgba(33,33,33,.2); 
-}
-
-#profile-container {
+  }
+  
+  #profile-container {
     color: black;
     /* background-color: white; */
     /* padding-bottom: 20px; */
-}
-
-.notification {
+  }
+  
+  .notification {
     padding-top: 1.25rem;
     padding-right: 2rem;
     padding-bottom: 1.25rem;
     padding-left: 2rem;
-}
-
-.slider-navigation-next {
+  }
+  
+  .slider-navigation-next {
     left: auto;
     right: 0;
     background: #fff center center no-repeat;
     background-size: 20px 20px;
     margin-right: 5px;
-}
-
-.slider-navigation-previous {
+  }
+  
+  .slider-navigation-previous {
     margin-left: 5px;
-}
-
-.is-horizontal-center {
+  }
+  
+  .is-horizontal-center {
     justify-content: center;
-}
-
-.card {
+  }
+  
+  .card {
     background-color: transparent;
     box-shadow: none;
     text-align: center;
-}
-
-.footer {
+  }
+  
+  .footer {
     padding:2rem 1.5rem 2rem;
     background-color: #68b0ac4d;
     /* border-top: 1px solid #006a71; */
     color: darkslategrey;    
-}
-
-/* Parallax test but removed the html already, I left it in case it's an option for the profile section on homepage */
-.parallax {
+  }
+  
+  /* Parallax test but removed the html already, I left it in case it's an option for the profile section on homepage */
+  .parallax {
     /* The image used */
     /* background-image: url("/assets/img/logo-gf.png"); */
   
@@ -143,10 +102,11 @@ color: white;
     background-repeat: no-repeat;
     background-size: cover;
   }
-
+  
   /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
-@media only screen and (max-device-width: 1366px) {
+  @media only screen and (max-device-width: 1366px) {
     .parallax {
       background-attachment: scroll;
     }
   }
+  
