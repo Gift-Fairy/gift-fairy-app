@@ -10,7 +10,6 @@ $('#fashion, #electronics, #home, #all, #pets').on('click', '.delete', function 
 $("#add-item").on('click', function (event) {
   event.preventDefault();
 
-  var categoryId = $('#category').val().trim();
   var brand = $('#brand').val().trim();
   var product = $('#product').val().trim();
 
