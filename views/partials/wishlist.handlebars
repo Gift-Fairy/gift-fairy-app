@@ -65,23 +65,25 @@
                 <nav class="is-boxed">
                     <div class="container" id="wishlist-panel">
                         <ul class="tabs py-2 is-boxed">
-                            <li class="tablinks"><a href="#all">These are the gifts you want:</a></li>
+                            <li class="tablinks"></li>
                             <!-- <li class="tablinks"><a href="#electronics">Electronics</a></li>
                 <li class="tablinks"><a href="#fashion">Fashion</a></li>
                 <li class="tablinks"><a href="#home">Home &Garden</a></li>
                 <li class="tablinks"><a href="#pets">Pets</a></li> -->
-                            <li class="tablinks"><a href="#search"><strong>Search Items</strong></a></li>
+                            {{!-- <li class="tablinks"><a href="#search"><strong>Search Items</strong></a></li> --}}
                         </ul>
                     </div>
                 </nav>
 
                 <div class="tab content" id="items">
                     <ul class="container is-6">
-                        <il class="tab-pane animated" id="all" name="all">
-                            {{#each data.wishitems}}
-                            <p>{{this.brand_name}} {{this.item_name}}<button class="delete is-pulled-left" id="wishitem-{{this.id}}"></button></p>
-                            {{/each}}
-                        </il>
+                        {{!-- <il class="tab-pane animated" id="all" name="all"> --}}
+                            <div id="all">
+                                {{#each data.wishitems}}
+                                <p>{{this.brand_name}} {{this.item_name}}<button class="delete is-pulled-left" id="wishitem-{{this.id}}"></button></p>
+                                {{/each}}
+                            </div>
+                        {{!-- </il> --}}
 
 
                         <il id="electronics" class="tab-pane animated" name="electronics">
@@ -118,7 +120,7 @@
                             </il>
 
                             {{!-- search section with datalist and autocomplete --}}
-                            <li id="search" class="tab-pane animated">
+                            {{!-- <li id="search" class="tab-pane animated">
                                 <form class="form" id="form" autocomplete="on">
                                     <div class="field">
                                         <label class="label">See if an item is already added in
@@ -128,9 +130,9 @@
                                                 placeholder="Search for wish items.." name="input" id="input0">
                                             <datalist id="wish_search">
                                                 {{#each data.wishitems}}
-                                                <option value="{{this}}">{{this}}
+                                                <option value="{{this.brand_name}} {{this.item_name}}">{{this.brand_name}} {{this.item_name}}
                                                 </option>
-                                                {{/each}}
+                                                {{/each}} --}}
 
                                                 {{!-- {{#each brand_name && item_name}}
                                             <option value="{{{brand_name && item_name}}}">{{{brand_name && item_name}}}

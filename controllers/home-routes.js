@@ -54,9 +54,39 @@ router.get('/list', (req, res) =>
     });
 });
 
-// router.get('/list/:id', (req, res) =>
-// {
+router.get('/list/:id', (req, res) =>
+{
+    User.findOne(
+    {
+        where:
+        {
+            id: req.params.id
+        },
+        include:
+        {
+            model: Wishitem,
+            attributes:['id', 'brand_name', 'item_name']
+        }
+    })
+    .then(dbUserData =>
+    {
+        if (!dbUserData) 
+        {
+            res.render('main', {layout: 'index', loggedin: req.session.loggedin});
+            return;
+        }
 
-// });
+        // serialize the data
+        const data = dbUserData.get({ plain: true });
+
+        // pass data to template
+        res.render('main', {layout: 'staticwishlist', data});
+    })
+    .catch(err =>
+    {
+        console.log(err);
+        res.render('main', {layout: 'index', loggedin: req.session.loggedin});
+    });
+});
 
 module.exports = router;

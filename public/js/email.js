@@ -16,7 +16,7 @@ async function sendEmail(event)
     let name = data.full_name;
     let id = data.id;
     let link = `https://polar-cove-94723.herokuapp.com/list/${id}`;
-    const response = fetch('/api/users/email',
+    const response = await fetch('/api/users/email',
     {
         method: 'POST',
         body: JSON.stringify(
@@ -37,7 +37,7 @@ async function sendEmail(event)
     }
     else
     {
-        console.log('Error');
+        console.log('Error', response);
     }
 }
 

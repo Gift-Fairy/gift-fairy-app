@@ -56,21 +56,25 @@ User.init(
     {
         type: DataTypes.STRING,
         allowNull: true,
+        defaultValue: ''
     },
     shoe_size:
     {
         type: DataTypes.STRING,
-        allowNull: true
+        allowNull: true,
+        defaultValue: ''
     },
     favorite_color:
     {
         type: DataTypes.STRING,
-        allowNull: true
+        allowNull: true,
+        defaultValue: ''
     },
     favorite_brand:
     {
         type: DataTypes.STRING,
-        allowNull: true
+        allowNull: true,
+        defaultValue: ''
     }
 },
 {

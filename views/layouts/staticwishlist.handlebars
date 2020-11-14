@@ -18,8 +18,11 @@
 </head>
 
 <body>
-
+    {{#if loggedin}}
     {{>logout}}
+    {{else}}
+    {{>loginheader}}
+    {{/if}}
 
     <div class="container">
         {{{body}}}
@@ -30,7 +33,7 @@
         <div class="column is-fullwidth pt-6 is-centered">
 
     <!-- wishlist input section and current wishlist -->
-    {{>liststatic}}
+    {{>liststatic data}}
 
         </div>
     </section>
@@ -43,6 +46,8 @@
     <script src="/js/update-preferences.js"></script>
     <script src="/js/remove-wishitem.js"></script>
     <script src="/js/wishlist.js"></script>
+    <script src="/js/login.js"></script>
+    <script src="/js/logout.js"></script>
 </body>
 
 </html>
