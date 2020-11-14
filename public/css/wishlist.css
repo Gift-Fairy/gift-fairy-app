@@ -14,7 +14,8 @@
 
 #wishlist [type="submit"]:hover,
 #cat-btn:hover, 
-#share-btn:hover {
+#share-btn:hover,
+#logout:hover {
   background-color: #68b0ac;
   color: white;
 }
@@ -22,7 +23,8 @@
 #wishlist [type="submit"]:focus,
 #cat-btn:focus,
 #save-btn:focus,
-#share-btn:focus {
+#share-btn:focus,
+#logout:focus {
   margin-bottom: 0;
   background-color: #006a70;
   color: white;

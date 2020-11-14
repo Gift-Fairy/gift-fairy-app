@@ -8,6 +8,34 @@ body {
     color: white;
 }
 
+#profile,
+#login,
+#account-login,
+#register,
+#logout {
+  color: white;
+}
+
+#register,
+#account-login,
+#logout {
+  background-color: #ff7e67e6;
+}
+
+#register,
+#account-login,
+#logout {
+  background-color: #ff7e67e6;
+  color: white;
+}
+
+#register:hover,
+#account-login:hover,
+#logout:hover {
+background-color: #68b0ac;
+color: white;
+}
+
 .navbar {
    /* background-color:rgba(235,244,243, 90%); */
    padding: .3em;

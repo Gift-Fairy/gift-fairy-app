@@ -104,20 +104,32 @@ hr {
 #register [type="submit"],
 #cat-btn,
 #save-btn,
-#share-btn {
+#share-btn,
+#register,
+#account-login,
+#logout {
   background-color: #ff7e67e6;
+  color: white;
 }
 
 #fs-frm [type="submit"]:hover, 
-#choose-category [type="submit"]:hover,
-#form [type="submit"]:hover {
+#form [type="submit"]:hover,
+#register:hover,
+#save-btn:hover,
+#share-btn:hover,
+#account-login:hover,
+#logout:hover {
   background-color: #68b0ac;
   color: white;
 }
 
 #fs-frm [type="submit"]:focus, 
-#choose-category [type="submit"]:focus,
-#form [type="submit"]:focus {
+#form [type="submit"]:focus,
+#register:focus,
+#save-btn:focus,
+#share-btn:focus,
+#account-login:focus,
+#logout:focus {
   margin-bottom: 0;
   background-color: #006a70;
   color: white;
