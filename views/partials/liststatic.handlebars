@@ -1,0 +1,193 @@
+<!-- detailed wishlist -->
+<section class="container" id="wishlist">
+    <div class="column is-fullwidth pt-6 is-centered">
+        <div class="columns is-centered">
+            <div class="column title has-text-centered is-10">
+                <p><strong>{{data.full_name}}'S WISHLIST</strong></p>
+            </div>
+        </div>
+
+        <!-- shoe size, shirt size, brands, colors  -->
+        <div class="container" id="userdetails">
+            <div class="title has-text-centered"><strong>Make it easier for your friends and family to get you
+                    gifts:</strong>
+            </div>
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label">Shoe Size</label>
+                    </div>
+                    <div class="field-body is-2">
+                        <p>8.5</p>
+                        <div class="field-label is-normal">
+                            <label class="label">Shirt Size:</label>
+                        </div>
+                        <p>Medium</p>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                        <label class="label">Favorite Colors:</label>
+                    </div>
+                    <div class="field-body is-3">
+                        <div class="field">
+                            <p>Purple, Pink, Navy Blue</p>
+                        </div>
+                        <div class="field-label is-normal">
+                            <label class="label">Favorite Brands:</label>
+                        </div>
+                        <p>
+                        <div class="field">
+                            <p>Zara, Under Armour, Bath & Body Works</p>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+        </div>
+
+
+
+
+        <!-- panel for saved wishlist items -->
+        <div class="column panel is-5 my-3 is-desktop" id="panel">
+            <p class="panel-heading" id="paneltitle">
+                Your Wishlist!
+            </p>
+            <nav class="is-boxed">
+                <div class="container" id="wishlist-panel">
+                    <ul class="tabs py-2 is-boxed">
+                        <li class="tablinks"><a href="#all">These are the gifts you want:</a></li>
+                        <li class="tablinks"><a href="#search"><strong>Search Items</strong></a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="tab content" id="items">
+                <ul class="container is-6">
+                    <il class="tab-pane animated" id="all" name="all">
+                        {{#each data.wishitems}}
+                        <p>{{this.brand_name}} {{this.item_name}}<button class="delete is-pulled-left"
+                                id="wishitem-{{this.id}}"></button></p>
+                        {{/each}}
+                    </il>
+
+
+                    <il id="electronics" class="tab-pane animated" name="electronics">
+                        <p>Le Creuset dutch oven</p>
+                        <p>Apple iPhone 12</p>
+                        <p>Apple iPhone 12</p>
+                        <p>H&M pants</p>
+                        <p>black jacket</p>
+                        <p>LG Monitor</p>
+                        <p>Converse high-top</p>
+                    </il>
+
+                    <il id="fashion" class="tab-pane animated" name="fashion">
+                        <p>Apple iPhone 12</p>
+                        <p>black jacket</p>
+                        <p>LG Monitor</p>
+                        <p>Converse high-top</p>
+                        <p>Apple iPhone 12</p>
+                        <p>H&M pants</p>
+                        <p>black jacket</p>
+                        <p>LG Monitor</p>
+                        <p>Converse high-top</p>
+                    </il>
+
+                    <il id="pets" class="tab-pane animated" name="pets">
+                        <p>Converse high-top</p>
+                        <p>Apple iPhone 12</p>
+
+                        <il id="home" class="tab-pane animated" name="home">
+                            <p>LG Monitor</p>
+                            <p>Converse high-top</p>
+                            <p>Apple iPhone 12</p>
+                        </il>
+
+                        {{!-- search section with datalist and autocomplete --}}
+                        <li id="search" class="tab-pane animated">
+                            <form class="form" id="form" autocomplete="on">
+                                <div class="field">
+                                    <label class="label">See if an item is already added in
+                                        this list</label>
+                                    <div class="control">
+                                        <input list="wish_search" onkeydown="" class="input" type="text"
+                                            placeholder="Search for wish items.." name="input" id="input0">
+                                        <datalist id="wish_search">
+                                            {{#each data.wishitems}}
+                                            <option value="{{this}}">{{this}}
+                                            </option>
+                                            {{/each}}
+
+                                            {{!-- Filler code for Demo --}}
+                                            <option value="Dell-Latitude 14">Dell-Latitude 14"</option>
+                                            <option value="Apple iPhone 12">Apple iPhone 12</option>
+                                            <option value="Creuset dutch oven">Creuset dutch oven</option>
+                                            <option value="H&M pants">H&M pants</option>
+                                            <option value="black jacket">black jacket</option>
+                                            <option value="LG Monitor">LG Monitor</option>
+                                            <option value="Converse high-top">Converse high-top"</option>
+                                        </datalist>
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+
+    <!-- share this wishlist button -->
+    <!-- modal to share wishlist via email or download -->
+    <div class="column" id="email">
+        <div class="has-text-centered">
+            <div id="modal" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                    <div class="box">
+                        <div class="columns is-6">
+                            <div class="column is-6">
+                                <article class="media">
+                                    <div class="title has-text-centered">
+                                        <p>Hey {{data.full_name}}, let's share your list!</p>
+                                    </div>
+                                </article>
+                                <div class="column">
+                                    <label class="label">Message</label>
+                                    <textarea id="message" class="textarea" placeholder="Textarea"></textarea>
+                                </div>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    {{!-- <div class="column is-3">
+                                                                <label class="label">Friend's Name</label>
+                                                                    <input class="is-active" type="name" placeholder="" value="Jane">
+                                                            </div> --}}
+                                    <div class="column is-3">
+                                        <label class="label">Email</label>
+                                        <input class="is-active" id="email-input" type="email" placeholder="Email input"
+                                            value="jane@gmail.com">
+                                    </div>
+                                    <div class="column is-2 has-text-centered">
+                                        <div class="control">
+                                            <button class="button is-primary" id="send-email">Send
+                                                Email</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </article>
+                    </div>
+                </div>
+                <button class="modal-close is-large" aria-label="close"></button>
+            </div>
+            <button class="button is-primary" id="share-btn">Share Wishlist</button>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</section>
