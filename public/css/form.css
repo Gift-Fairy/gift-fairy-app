@@ -107,7 +107,8 @@ hr {
 #share-btn,
 #register,
 #account-login,
-#logout {
+#logout,
+#send-email {
   background-color: #ff7e67e6;
   color: white;
 }
@@ -118,7 +119,8 @@ hr {
 #save-btn:hover,
 #share-btn:hover,
 #account-login:hover,
-#logout:hover {
+#logout:hover,
+#send-email:hover {
   background-color: #68b0ac;
   color: white;
 }
@@ -129,7 +131,8 @@ hr {
 #save-btn:focus,
 #share-btn:focus,
 #account-login:focus,
-#logout:focus {
+#logout:focus
+#send-email:focus {
   margin-bottom: 0;
   background-color: #006a70;
   color: white;
