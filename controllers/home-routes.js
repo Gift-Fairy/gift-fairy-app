@@ -5,18 +5,18 @@ const { User, Wishitem } = require('../models');
 
 router.get('/', (req, res) =>
 {
-    console.log(req.session.id); 
-    res.render('main', {layout: "index"});
+    console.log(req.session.id);
+    res.render('main', {layout: "index", loggedin: req.session.loggedin});
 });
 
 router.get('/register', (req, res) =>
 {
-    res.render('main', {layout: "form"});
+    res.render('main', {layout: "form", loggedin: req.session.loggedin});
 });
 
 router.get('/login', (req, res) =>
 {
-    res.render('main', {layout: 'loginform'});
+    res.render('main', {layout: 'loginform', loggedin: req.session.loggedin});
 });
 
 router.get('/list', (req, res) =>
@@ -43,7 +43,6 @@ router.get('/list', (req, res) =>
 
         // serialize the data
         const data = dbUserData.get({ plain: true });
-        console.log(data.wishitems);
 
         // pass data to template
         res.render('main', {layout: 'fullwishlist', data});
@@ -51,8 +50,8 @@ router.get('/list', (req, res) =>
     .catch(err =>
     {
         console.log(err);
-        res.status(500).json(err);
-    })
+        res.render('main', {layout: 'index', loggedin: req.session.loggedin});
+    });
 });
 
 // router.get('/list/:id', (req, res) =>
