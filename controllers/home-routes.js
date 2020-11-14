@@ -5,14 +5,14 @@ const { User, Wishitem } = require('../models');
 
 router.get('/', (req, res) =>
 {
-    res.render('main', {layout: "index", loggedin: req.session.loggedin});
+    res.render('main', {layout: "index", loggedin: req.session.loggedin, id: req.session.user_id});
 });
 
 router.get('/register', (req, res) =>
 {
     if(req.session.loggedin)
     {
-        res.render('main', {layout: 'index', loggedin: req.session.loggedin});
+        res.render('main', {layout: 'index', loggedin: req.session.loggedin, id: req.session.user_id});
     }
     else
     {
@@ -24,7 +24,7 @@ router.get('/login', (req, res) =>
 {
     if(req.session.loggedin)
     {
-        res.render('main', {layout: 'index', loggedin: req.session.loggedin});
+        res.render('main', {layout: 'index', loggedin: req.session.loggedin, id: req.session.user_id});
     }
     else
     {
@@ -63,7 +63,7 @@ router.get('/list', (req, res) =>
     .catch(err =>
     {
         console.log(err);
-        res.render('main', {layout: 'index', loggedin: req.session.loggedin});
+        res.render('main', {layout: 'index', loggedin: req.session.loggedin, id: req.session.user_id});
     });
 });
 
@@ -85,20 +85,22 @@ router.get('/list/:id', (req, res) =>
     {
         if (!dbUserData) 
         {
-            res.render('main', {layout: 'index', loggedin: req.session.loggedin});
+            res.render('main', {layout: 'index', loggedin: req.session.loggedin, id: req.session.user_id});
             return;
         }
 
         // serialize the data
         const data = dbUserData.get({ plain: true });
+        // console.log(data);
+        // console.log(data.full_name);
 
         // pass data to template
-        res.render('main', {layout: 'staticwishlist', data});
+        res.render('main', {layout: 'staticwishlist', data, loggedin: req.session.loggedin});
     })
     .catch(err =>
     {
         console.log(err);
-        res.render('main', {layout: 'index', loggedin: req.session.loggedin});
+        res.render('main', {layout: 'index', loggedin: req.session.loggedin, id: req.session.user_id});
     });
 });
 
